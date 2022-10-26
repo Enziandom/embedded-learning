@@ -1,0 +1,60 @@
+Configuration	WEEK08_GPIO_LIGHT
+STM32CubeMX 	6.6.1
+Date	10/22/2022
+MCU	STM32L431RCTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14 (JTCK-SWCLK)
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13 (JTMS-SWDIO)
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+46	PA13 (JTMS-SWDIO)	SYS_JTMS-SWDIO	
+49	PA14 (JTCK-SWCLK)	SYS_JTCK-SWCLK	
+59	PB7	GPIO_Output	LIGHT_RED
+61	PB8	GPIO_Output	LIGHT_GREEN
+62	PB9	GPIO_Output	LIGHT_BLUE
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14 (JTCK-SWCLK)
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13 (JTMS-SWDIO)
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+46	PA13 (JTMS-SWDIO)	SYS_JTMS-SWDIO	
+49	PA14 (JTCK-SWCLK)	SYS_JTCK-SWCLK	
+59	PB7	GPIO_Output	LIGHT_RED
+61	PB8	GPIO_Output	LIGHT_GREEN
+62	PB9	GPIO_Output	LIGHT_BLUE
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : WEEK08_GPIO_LIGHT
+Project Folder : E:\DevProjects\STM32CubeMX Projects\WEEK08_GPIO_LIGHT
+Toolchain / IDE : MDK-ARM V5.32
+Firmware Package Name and Version : STM32Cube FW_L4 V1.17.2
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

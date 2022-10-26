@@ -1,0 +1,346 @@
+T3A1C 002:484.136   SEGGER J-Link V7.64 Log File
+T3A1C 002:484.328   DLL Compiled: Apr  1 2022 16:04:43
+T3A1C 002:484.343   Logging started @ 2022-10-19 11:52
+T3A1C 002:484.357 - 2484.364ms
+T3A1C 002:484.381 JLINK_SetWarnOutHandler(...)
+T3A1C 002:484.398 - 0.023ms
+T3A1C 002:484.414 JLINK_OpenEx(...)
+T3A1C 002:486.514   
+  ***** Error: 
+T3A1C 002:486.544   Cannot connect to J-Link.
+T3A1C 002:496.250 - 11.870ms returns "Cannot connect to J-Link."
+T3A1C 002:496.844 
+  ***** 
+T3A1C 002:496.877 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T3A1C 002:496.902 JLINK_GetHardwareVersion()
+T3A1C 002:506.975 - 10.098ms
+T3A1C 003:220.133 JLINK_GetDLLVersion()
+T3A1C 003:220.182 - 0.056ms returns 76400
+T3A1C 003:220.201 
+  ***** 
+T3A1C 003:220.221 API Error: API JLINK_CORE_GetFound function called before JLINKARM_Open()
+T3A1C 003:220.243 JLINK_CORE_GetFound()
+T3A1C 003:230.707 - 10.490ms
+T3A1C 003:230.759 
+  ***** 
+T3A1C 003:230.782 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T3A1C 003:230.806 JLINK_GetDebugInfo(0x100 = JLINKARM_ROM_TABLE_ADDR_INDEX)
+T3A1C 003:241.590 - 10.809ms
+T3A1C 003:241.633 
+  ***** 
+T3A1C 003:241.655 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T3A1C 003:241.680 JLINK_GetDebugInfo(0x01 = Unknown)
+T3A1C 003:253.076 - 11.422ms
+T3A1C 003:253.118 JLINK_GetDeviceFamily
+T3A1C 003:253.140 - 0.029ms returns 0
+T3A1C 003:253.156 
+  ***** 
+T3A1C 003:253.176 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T3A1C 003:253.198 JLINK_GetDebugInfo(0x01 = Unknown)
+T3A1C 003:263.214 - 10.052ms
+T3A1C 003:263.272 JLINK_GetDeviceFamily
+T3A1C 003:263.294 - 0.033ms returns 0
+T3A1C 003:263.317 
+  ***** 
+T3A1C 003:263.347 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T3A1C 003:263.380 JLINK_GetDebugInfo(0x10F = JLINKARM_DEBUG_INFO_HAS_CORTEX_M_SECURITY_EXT_INDEX)
+T3A1C 003:273.731 - 10.376ms
+T3A1C 004:888.882 
+  ***** 
+T3A1C 004:888.924 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 004:888.951 JLINK_SetSpeed(50000)
+T3A1C 004:900.533 - 11.609ms
+T3A1C 004:900.576 JLINK_HasError()
+T3A1C 004:900.598 
+  ***** 
+T3A1C 004:900.618 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 004:900.647 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:910.560 - 9.939ms
+T3A1C 004:910.614 
+  ***** 
+T3A1C 004:910.636 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 004:910.661 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:920.477 - 9.841ms
+T3A1C 004:920.513 
+  ***** 
+T3A1C 004:920.534 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 004:920.559 JLINK_SetSpeed(33000)
+T3A1C 004:930.268 - 9.736ms
+T3A1C 004:930.311 JLINK_HasError()
+T3A1C 004:930.326 
+  ***** 
+T3A1C 004:930.347 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 004:930.369 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:939.927 - 9.583ms
+T3A1C 004:939.964 
+  ***** 
+T3A1C 004:939.985 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 004:940.010 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:951.612 - 11.627ms
+T3A1C 004:951.649 
+  ***** 
+T3A1C 004:951.672 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 004:951.698 JLINK_SetSpeed(25000)
+T3A1C 004:961.794 - 10.121ms
+T3A1C 004:961.836 JLINK_HasError()
+T3A1C 004:961.852 
+  ***** 
+T3A1C 004:961.872 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 004:961.894 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:971.320 - 9.451ms
+T3A1C 004:971.357 
+  ***** 
+T3A1C 004:971.378 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 004:971.403 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 004:981.432 - 10.055ms
+T3A1C 004:981.471 
+  ***** 
+T3A1C 004:981.493 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 004:981.519 JLINK_SetSpeed(20000)
+T3A1C 004:991.330 - 9.836ms
+T3A1C 004:991.370 JLINK_HasError()
+T3A1C 004:991.443 
+  ***** 
+T3A1C 004:991.463 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 004:991.486 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:001.662 - 10.201ms
+T3A1C 005:001.699 
+  ***** 
+T3A1C 005:001.720 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:001.745 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:011.156 - 9.439ms
+T3A1C 005:011.195 
+  ***** 
+T3A1C 005:011.216 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:011.240 JLINK_SetSpeed(10000)
+T3A1C 005:020.560 - 9.344ms
+T3A1C 005:020.600 JLINK_HasError()
+T3A1C 005:020.616 
+  ***** 
+T3A1C 005:020.637 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:020.660 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:030.893 - 10.261ms
+T3A1C 005:030.933 
+  ***** 
+T3A1C 005:030.954 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:030.978 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:040.874 - 9.935ms
+T3A1C 005:040.927 
+  ***** 
+T3A1C 005:040.950 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:040.977 JLINK_SetSpeed(5000)
+T3A1C 005:050.626 - 9.675ms
+T3A1C 005:050.667 JLINK_HasError()
+T3A1C 005:050.684 
+  ***** 
+T3A1C 005:050.704 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:050.730 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:062.523 - 11.827ms
+T3A1C 005:062.574 
+  ***** 
+T3A1C 005:062.605 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:062.643 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:074.937 - 12.326ms
+T3A1C 005:074.985 
+  ***** 
+T3A1C 005:075.016 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:075.050 JLINK_SetSpeed(3000)
+T3A1C 005:086.193 - 11.170ms
+T3A1C 005:086.237 JLINK_HasError()
+T3A1C 005:086.253 
+  ***** 
+T3A1C 005:086.273 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:086.295 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:096.278 - 10.008ms
+T3A1C 005:096.315 
+  ***** 
+T3A1C 005:096.337 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:096.361 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:106.182 - 9.845ms
+T3A1C 005:106.219 
+  ***** 
+T3A1C 005:106.241 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:106.266 JLINK_SetSpeed(2000)
+T3A1C 005:115.487 - 9.246ms
+T3A1C 005:115.528 JLINK_HasError()
+T3A1C 005:115.544 
+  ***** 
+T3A1C 005:115.564 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:115.587 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:124.685 - 9.122ms
+T3A1C 005:124.722 
+  ***** 
+T3A1C 005:124.743 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:124.767 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:134.614 - 9.872ms
+T3A1C 005:134.651 
+  ***** 
+T3A1C 005:134.671 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:134.696 JLINK_SetSpeed(1000)
+T3A1C 005:144.100 - 9.429ms
+T3A1C 005:144.140 JLINK_HasError()
+T3A1C 005:144.156 
+  ***** 
+T3A1C 005:144.177 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:144.200 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:154.155 - 9.981ms
+T3A1C 005:154.193 
+  ***** 
+T3A1C 005:154.213 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:154.238 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:163.464 - 9.252ms
+T3A1C 005:163.501 
+  ***** 
+T3A1C 005:163.523 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:163.548 JLINK_SetSpeed(500)
+T3A1C 005:172.549 - 9.026ms
+T3A1C 005:172.589 JLINK_HasError()
+T3A1C 005:172.605 
+  ***** 
+T3A1C 005:172.626 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:172.654 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:182.498 - 9.870ms
+T3A1C 005:182.536 
+  ***** 
+T3A1C 005:182.557 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:182.588 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:192.407 - 9.843ms
+T3A1C 005:192.443 
+  ***** 
+T3A1C 005:192.463 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:192.487 JLINK_SetSpeed(200)
+T3A1C 005:201.825 - 9.366ms
+T3A1C 005:201.869 JLINK_HasError()
+T3A1C 005:201.885 
+  ***** 
+T3A1C 005:201.905 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:201.927 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:211.198 - 9.300ms
+T3A1C 005:211.239 
+  ***** 
+T3A1C 005:211.259 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:211.283 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:221.028 - 9.782ms
+T3A1C 005:221.088 
+  ***** 
+T3A1C 005:221.115 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:221.144 JLINK_SetSpeed(100)
+T3A1C 005:232.259 - 11.141ms
+T3A1C 005:232.300 JLINK_HasError()
+T3A1C 005:232.316 
+  ***** 
+T3A1C 005:232.336 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:232.358 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:241.908 - 9.577ms
+T3A1C 005:241.948 
+  ***** 
+T3A1C 005:241.969 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:241.994 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:251.895 - 9.925ms
+T3A1C 005:251.934 
+  ***** 
+T3A1C 005:251.955 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:251.980 JLINK_SetSpeed(50)
+T3A1C 005:261.510 - 9.557ms
+T3A1C 005:261.554 JLINK_HasError()
+T3A1C 005:261.569 
+  ***** 
+T3A1C 005:261.590 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:261.612 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:271.049 - 9.461ms
+T3A1C 005:271.085 
+  ***** 
+T3A1C 005:271.106 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:271.130 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:280.260 - 9.155ms
+T3A1C 005:280.297 
+  ***** 
+T3A1C 005:280.318 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:280.343 JLINK_SetSpeed(20)
+T3A1C 005:289.789 - 9.471ms
+T3A1C 005:289.830 JLINK_HasError()
+T3A1C 005:289.846 
+  ***** 
+T3A1C 005:289.866 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:289.889 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:300.337 - 10.473ms
+T3A1C 005:300.374 
+  ***** 
+T3A1C 005:300.395 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:300.420 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:309.720 - 9.325ms
+T3A1C 005:309.758 
+  ***** 
+T3A1C 005:309.778 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:309.805 JLINK_SetSpeed(10)
+T3A1C 005:318.765 - 8.984ms
+T3A1C 005:318.805 JLINK_HasError()
+T3A1C 005:318.821 
+  ***** 
+T3A1C 005:318.842 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:318.865 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:327.710 - 8.872ms
+T3A1C 005:327.749 
+  ***** 
+T3A1C 005:327.769 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:327.793 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:338.448 - 10.679ms
+T3A1C 005:338.485 
+  ***** 
+T3A1C 005:338.506 API Error: API JLINK_SetSpeed function called before JLINKARM_Open()
+T3A1C 005:338.531 JLINK_SetSpeed(5)
+T3A1C 005:349.447 - 10.942ms
+T3A1C 005:349.489 JLINK_HasError()
+T3A1C 005:349.505 
+  ***** 
+T3A1C 005:349.526 API Error: API JLINK_WriteMem function called before JLINKARM_Open()
+T3A1C 005:349.549 JLINK_WriteMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:358.470 - 8.946ms
+T3A1C 005:358.507 
+  ***** 
+T3A1C 005:358.528 API Error: API JLINK_ReadMem function called before JLINKARM_Open()
+T3A1C 005:358.553 JLINK_ReadMem(0x20000000, 0xA Bytes, ...)
+T3A1C 005:368.609 - 10.080ms
+T3A1C 005:369.611 JLINK_IsOpen()
+T3A1C 005:369.638 - 0.034ms returns 0x00
+T3A1C 005:369.656 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T3A1C 005:371.036 - 1.397ms returns 0xFFFFFFFF
+T3A1C 005:371.067 JLINK_EnableLog(...)
+T3A1C 005:371.081 - 0.021ms
+T3A1C 005:371.098 JLINK_SetLogFile(...)
+T3A1C 005:371.112 - 0.020ms
+T3A1C 005:371.128 JLINK_SetWarnOutHandler(...)
+T3A1C 005:371.141 - 0.020ms
+T3A1C 005:371.157 JLINK_OpenEx(...)
+T3A1C 005:382.040 - 10.908ms returns "Failed to open DLL"
+T3A1C 005:382.634 
+  ***** 
+T3A1C 005:382.668 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T3A1C 005:382.694 JLINK_GetHardwareVersion()
+T3A1C 005:391.943 - 9.275ms
+T3A1C 006:789.891 JLINK_IsOpen()
+T3A1C 006:789.931 - 0.047ms returns 0x00
+T3A1C 006:789.950 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000010) 
+T3A1C 006:791.341 - 1.407ms returns 0
+T3A1C 007:405.866 
+  ***** 
+T3A1C 007:405.913 API Error: API JLINK_GetFirmwareString function called before JLINKARM_Open()
+T3A1C 007:405.940 JLINK_GetFirmwareString(...)
+T3A1C 007:416.752 - 10.838ms
+T3A1C 007:416.795 
+  ***** 
+T3A1C 007:416.816 API Error: API JLINK_GetFeatureString function called before JLINKARM_Open()
+T3A1C 007:427.828 
+  ***** 
+T3A1C 007:427.869 API Error: API JLINK_GetEmuCaps function called before JLINKARM_Open()
+T3A1C 007:427.894 JLINK_GetEmuCaps()
+T3A1C 007:436.506 - 8.636ms
+T3A1C 007:436.542 
+  ***** 
+T3A1C 007:436.564 API Error: API JLINK_TIF_GetAvailable function called before JLINKARM_Open()
+T3A1C 007:436.589 JLINK_TIF_GetAvailable(...)
+T3A1C 007:446.119 - 9.556ms
+T3A1C 009:441.125 JLINK_Close()
+T3A1C 009:441.271 - 0.157ms
+T3A1C 009:441.289   
+T3A1C 009:441.303   Closed

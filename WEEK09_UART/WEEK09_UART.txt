@@ -1,0 +1,54 @@
+Configuration	WEEK09_UART
+STM32CubeMX 	6.6.1
+Date	10/23/2022
+MCU	STM32L431RCTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART2	Asynchronous	USART2_RX	PA3
+USART2	Asynchronous	USART2_TX	PA2
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+16	PA2	USART2_TX	
+17	PA3	USART2_RX	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART2	Asynchronous	USART2_RX	PA3
+USART2	Asynchronous	USART2_TX	PA2
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+16	PA2	USART2_TX	
+17	PA3	USART2_RX	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : WEEK09_UART
+Project Folder : E:\DevProjects\STM32CubeMX Projects\WEEK09_UART
+Toolchain / IDE : MDK-ARM V5.32
+Firmware Package Name and Version : STM32Cube FW_L4 V1.17.2
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

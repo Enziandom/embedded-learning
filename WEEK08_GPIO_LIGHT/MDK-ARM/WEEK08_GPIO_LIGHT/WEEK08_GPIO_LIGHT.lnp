@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
+"week08_gpio_light\startup_stm32l431xx.o"
+"week08_gpio_light\main.o"
+"week08_gpio_light\gpio.o"
+"week08_gpio_light\stm32l4xx_it.o"
+"week08_gpio_light\stm32l4xx_hal_msp.o"
+"week08_gpio_light\stm32l4xx_hal_tim.o"
+"week08_gpio_light\stm32l4xx_hal_tim_ex.o"
+"week08_gpio_light\stm32l4xx_hal.o"
+"week08_gpio_light\stm32l4xx_hal_i2c.o"
+"week08_gpio_light\stm32l4xx_hal_i2c_ex.o"
+"week08_gpio_light\stm32l4xx_hal_rcc.o"
+"week08_gpio_light\stm32l4xx_hal_rcc_ex.o"
+"week08_gpio_light\stm32l4xx_hal_flash.o"
+"week08_gpio_light\stm32l4xx_hal_flash_ex.o"
+"week08_gpio_light\stm32l4xx_hal_flash_ramfunc.o"
+"week08_gpio_light\stm32l4xx_hal_gpio.o"
+"week08_gpio_light\stm32l4xx_hal_dma.o"
+"week08_gpio_light\stm32l4xx_hal_dma_ex.o"
+"week08_gpio_light\stm32l4xx_hal_pwr.o"
+"week08_gpio_light\stm32l4xx_hal_pwr_ex.o"
+"week08_gpio_light\stm32l4xx_hal_cortex.o"
+"week08_gpio_light\stm32l4xx_hal_exti.o"
+"week08_gpio_light\system_stm32l4xx.o"
+--library_type=microlib --nodebug --strict --scatter "WEEK08_GPIO_LIGHT\WEEK08_GPIO_LIGHT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "WEEK08_GPIO_LIGHT.map" -o WEEK08_GPIO_LIGHT\WEEK08_GPIO_LIGHT.axf
