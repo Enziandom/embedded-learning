@@ -53,13 +53,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	if (GPIO_Pin == KEY1_Pin)
-	{
-		HAL_GPIO_TogglePin(LIGHT_LED_GPIO_Port, LIGHT_LED_Pin);
-	}
-}
+
 /* USER CODE END 0 */
 
 /**
