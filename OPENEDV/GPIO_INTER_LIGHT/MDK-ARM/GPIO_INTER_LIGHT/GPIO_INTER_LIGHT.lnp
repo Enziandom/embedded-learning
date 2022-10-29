@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"gpio_inter_light\startup_stm32f103xe.o"
+"gpio_inter_light\main.o"
+"gpio_inter_light\gpio.o"
+"gpio_inter_light\stm32f1xx_it.o"
+"gpio_inter_light\stm32f1xx_hal_msp.o"
+"gpio_inter_light\stm32f1xx_hal_gpio_ex.o"
+"gpio_inter_light\stm32f1xx_hal_tim.o"
+"gpio_inter_light\stm32f1xx_hal_tim_ex.o"
+"gpio_inter_light\stm32f1xx_hal.o"
+"gpio_inter_light\stm32f1xx_hal_rcc.o"
+"gpio_inter_light\stm32f1xx_hal_rcc_ex.o"
+"gpio_inter_light\stm32f1xx_hal_gpio.o"
+"gpio_inter_light\stm32f1xx_hal_dma.o"
+"gpio_inter_light\stm32f1xx_hal_cortex.o"
+"gpio_inter_light\stm32f1xx_hal_pwr.o"
+"gpio_inter_light\stm32f1xx_hal_flash.o"
+"gpio_inter_light\stm32f1xx_hal_flash_ex.o"
+"gpio_inter_light\stm32f1xx_hal_exti.o"
+"gpio_inter_light\system_stm32f1xx.o"
+--nodebug --strict --scatter "GPIO_INTER_LIGHT\GPIO_INTER_LIGHT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "GPIO_INTER_LIGHT.map" -o GPIO_INTER_LIGHT\GPIO_INTER_LIGHT.axf
