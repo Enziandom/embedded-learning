@@ -43,8 +43,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t t_data[] = {"Welcome to the STM32L431 World!"};
-uint8_t r_data = 0;
+uint8_t pData;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,7 +95,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		if (HAL_UART_Receive(&huart2, &pData, 1, 0) == HAL_OK) {
+			HAL_UART_Transmit(&huart2, &pData, 1, 0);
+		}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
