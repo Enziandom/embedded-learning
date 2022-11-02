@@ -20,6 +20,7 @@
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
+#include "string.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -43,7 +44,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t pData;
+uint8_t rData;
+uint8_t pData[255];
+uint8_t count = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,9 +59,14 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	HAL_UART_Transmit(&huart2, &pData, 1, 0);
-	HAL_GPIO_TogglePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin);
-	HAL_UART_Receive_IT(&huart2, &pData, 1);
+	HAL_UART_Transmit(&huart2, &rData, 1, 0);
+	HAL_UART_Receive_IT(&huart2, &rData, 1);
+	pData[count++] = rData;
+	if (strcmp((char *)pData, "ON") == 0) {
+		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
+	} else {
+		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
+	}
 }
 /* USER CODE END 0 */
 
@@ -92,7 +100,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-	HAL_UART_Receive_IT(&huart2, &pData, 1);
+	HAL_UART_Receive_IT(&huart2, &rData, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,7 +108,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

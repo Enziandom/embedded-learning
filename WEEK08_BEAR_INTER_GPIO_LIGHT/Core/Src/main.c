@@ -57,9 +57,9 @@ void SystemClock_Config(void);
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if (GPIO_Pin == S4_KEY_Pin) {
-		HAL_GPIO_WritePin(S4_KEY_GPIO_Port, S4_KEY_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 	} else if (GPIO_Pin == S3_KEY_Pin) {
-		HAL_GPIO_WritePin(S3_KEY_GPIO_Port, S3_KEY_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
 	}
 }
 
