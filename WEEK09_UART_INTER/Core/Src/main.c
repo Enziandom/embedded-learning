@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,9 @@
 /* USER CODE BEGIN PV */
 uint8_t rData;
 uint8_t tData[255];
+uint8_t shaking[7] = "SHAKING";
+uint8_t on[2] = "ON";
+uint8_t off[3] = "OFF";
 int count = 0;
 /* USER CODE END PV */
 
@@ -60,12 +64,26 @@ void SystemClock_Config(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	HAL_UART_Transmit(&huart2, &rData, sizeof(rData), 0);
-	if (rData == 'a') {
-		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
-	} else if (rData == 'b') {
-		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
-	}
+	tData[count++] = rData;
 	HAL_UART_Receive_IT(&huart2, &rData, 1);
+}
+
+int stringCompare(uint8_t cData[], uint8_t bData[], int cDataLength, int bDataLength) {
+	int matched = 0;
+
+	for (int i = 0; i < bDataLength; i++) {
+		if (cData[i] == bData[i]) {
+			matched++;
+		}
+	}
+	
+	if (matched == bDataLength) {
+		// printf("[v]rx/tx matched successfully, the times is %d", matched);
+		return 0;
+	} else {
+		// printf("[x]rx/tx failed to match, the times is %d", matched);
+		return -1;
+	}
 }
 /* USER CODE END 0 */
 
@@ -110,13 +128,20 @@ int main(void)
   {
     /* USER CODE END WHILE */
 		HAL_Delay(1000);
-		if (rData == 'c') {
-			HAL_Delay(1000);
+		if (stringCompare(tData, shaking, sizeof(tData), sizeof(shaking)) == 0) {
+			for (int i = 0; i < 3; i++) {
+				HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
+				HAL_Delay(1000);
+				HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
+				HAL_Delay(1000);
+			}
+		} else if (stringCompare(tData, on, sizeof(tData), sizeof(on)) == 0) {
 			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
-			HAL_Delay(1000);
+		} else if (stringCompare(tData, off, sizeof(tData), sizeof(off)) == 0) {
 			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
-			printf("rData => %c", rData);
 		}
+		count = 0;
+		memset(&tData, 0, 255);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
