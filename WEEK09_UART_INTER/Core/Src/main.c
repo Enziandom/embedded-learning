@@ -18,13 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "string.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,8 +45,8 @@
 
 /* USER CODE BEGIN PV */
 uint8_t rData;
-uint8_t pData[255];
-uint8_t count = 0;
+uint8_t tData[255];
+int count = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,14 +59,13 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	HAL_UART_Transmit(&huart2, &rData, 1, 0);
-	HAL_UART_Receive_IT(&huart2, &rData, 1);
-	pData[count++] = rData;
-	if (strcmp((char *)pData, "ON") == 0) {
-		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
-	} else {
+	HAL_UART_Transmit(&huart2, &rData, sizeof(rData), 0);
+	if (rData == 'a') {
 		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
+	} else if (rData == 'b') {
+		HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
 	}
+	HAL_UART_Receive_IT(&huart2, &rData, 1);
 }
 /* USER CODE END 0 */
 
@@ -99,8 +98,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
 	HAL_UART_Receive_IT(&huart2, &rData, 1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,6 +109,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+		HAL_Delay(1000);
+		if (rData == 'c') {
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
+			printf("rData => %c", rData);
+		}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
