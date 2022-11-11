@@ -48,9 +48,10 @@
 uint8_t rData;
 uint8_t tData[255];
 uint8_t shaking[7] = "SHAKING";
-uint8_t on[2] = "ON";
-uint8_t off[3] = "OFF";
+uint8_t light_on[2] = "ON";
+uint8_t light_off[3] = "OFF";
 int count = 0;
+int flag = 1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,20 +65,26 @@ void SystemClock_Config(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	HAL_UART_Transmit(&huart2, &rData, sizeof(rData), 0);
-	tData[count++] = rData;
 	HAL_UART_Receive_IT(&huart2, &rData, 1);
+	tData[count++] = rData;
 }
 
-int stringCompare(uint8_t cData[], uint8_t bData[], int cDataLength, int bDataLength) {
+/**
+* compare the string.
+* 
+* @param source a array of the uart receive to pc.
+* @param target a array of the string that is being compared with the source array.
+* @retval if the two strings are completely equal, the function will return a 0, else return a -1.
+* @author zhengrenfu
+*/
+int compareString(uint8_t source[], uint8_t target[], int size) {
 	int matched = 0;
 
-	for (int i = 0; i < bDataLength; i++) {
-		if (cData[i] == bData[i]) {
-			matched++;
-		}
+	for (int i = 0; i < size; i++) {
+		if (source[i] == target[i]) matched++;
 	}
 	
-	if (matched == bDataLength) {
+	if (matched == size) {
 		// printf("[v]rx/tx matched successfully, the times is %d", matched);
 		return 0;
 	} else {
@@ -127,19 +134,28 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		HAL_Delay(1000);
-		if (stringCompare(tData, shaking, sizeof(tData), sizeof(shaking)) == 0) {
-			for (int i = 0; i < 3; i++) {
-				HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
-				HAL_Delay(1000);
-				HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
-				HAL_Delay(1000);
-			}
-		} else if (stringCompare(tData, on, sizeof(tData), sizeof(on)) == 0) {
+		HAL_Delay(100);
+		
+		if (compareString(tData, shaking, sizeof(shaking)) == 0) {
+			flag = 0;
+		} else if (compareString(tData, light_on, sizeof(light_on)) == 0) {
+			// printf("light is on, flag => %d", flag);
 			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
-		} else if (stringCompare(tData, off, sizeof(tData), sizeof(off)) == 0) {
+			flag = 1;
+		} else if (compareString(tData, light_off, sizeof(light_off)) == 0) {
+			// printf("light is off, flag => %d", flag);
 			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
+			flag = 1;
 		}
+	
+		if (flag == 0) {
+			// printf("shaking the light, flag => %d", flag);
+			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
+			HAL_Delay(1000);
+		}
+		
 		count = 0;
 		memset(&tData, 0, 255);
     /* USER CODE BEGIN 3 */
