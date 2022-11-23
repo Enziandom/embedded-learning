@@ -3,6 +3,7 @@
 "week12_timer_flash\main.o"
 "week12_timer_flash\gpio.o"
 "week12_timer_flash\tim.o"
+"week12_timer_flash\usart.o"
 "week12_timer_flash\stm32l4xx_it.o"
 "week12_timer_flash\stm32l4xx_hal_msp.o"
 "week12_timer_flash\stm32l4xx_hal_tim.o"
@@ -22,8 +23,10 @@
 "week12_timer_flash\stm32l4xx_hal_pwr_ex.o"
 "week12_timer_flash\stm32l4xx_hal_cortex.o"
 "week12_timer_flash\stm32l4xx_hal_exti.o"
+"week12_timer_flash\stm32l4xx_hal_uart.o"
+"week12_timer_flash\stm32l4xx_hal_uart_ex.o"
 "week12_timer_flash\system_stm32l4xx.o"
---nodebug --strict --scatter "WEEK12_TIMER_FLASH\WEEK12_TIMER_FLASH.sct"
+--library_type=microlib --nodebug --strict --scatter "WEEK12_TIMER_FLASH\WEEK12_TIMER_FLASH.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "WEEK12_TIMER_FLASH.map" -o WEEK12_TIMER_FLASH\WEEK12_TIMER_FLASH.axf

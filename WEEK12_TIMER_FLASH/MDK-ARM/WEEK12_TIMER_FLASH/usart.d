@@ -1,4 +1,4 @@
-week12_timer_flash/tim.o: ..\Core\Src\tim.c ..\Core\Inc\tim.h \
+week12_timer_flash/usart.o: ..\Core\Src\usart.c ..\Core\Inc\usart.h \
   ..\Core\Inc\main.h ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
   ..\Core\Inc\stm32l4xx_hal_conf.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h \
@@ -32,4 +32,5 @@ week12_timer_flash/tim.o: ..\Core\Src\tim.c ..\Core\Inc\tim.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_tim.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_tim_ex.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_uart.h \
-  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_uart_ex.h
+  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_uart_ex.h \
+  E:\DevSdks\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h
