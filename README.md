@@ -64,3 +64,9 @@
    - 发送字符串 SHAKING => LED 闪烁；
 
 实验备注：2022 年秋季学期第九周实验二第二部分。
+
+# WEEK11_ADC 和 ADC1
+
+ADC1 是 DAC 实验项目。WEEK11_ADC 是 ADC 实验项目。
+
+WEEK11_ADC 通过金葫芦实现。ADC1 需要借助于小熊派的按键来实现。
