@@ -70,3 +70,11 @@
 ADC1 是 DAC 实验项目。WEEK11_ADC 是 ADC 实验项目。
 
 WEEK11_ADC 通过金葫芦实现。ADC1 需要借助于小熊派的按键来实现。
+
+# WEEK12_TIMER_FLASH
+
+全部基于金葫芦实现
+
+# WEEK13_BEAR_SPI_I2C
+
+全部基于小熊派
