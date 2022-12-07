@@ -65,16 +65,16 @@
 
 实验备注：2022 年秋季学期第九周实验二第二部分。
 
-# WEEK11_ADC 和 ADC1
+# WEEK11_ADC/ADC1
 
-ADC1 是 DAC 实验项目。WEEK11_ADC 是 ADC 实验项目。
+ADC1 是 DAC 的实验项目；WEEK11_ADC 是 ADC 实验项目。
 
-WEEK11_ADC 通过金葫芦实现。ADC1 需要借助于小熊派的按键来实现。
+WEEK11_ADC 通过金葫芦实现。ADC1 通过小熊派实现。
 
 # WEEK12_TIMER_FLASH
 
-全部基于金葫芦实现读取/写入 FLASH 的功能。
+基于金葫芦实现读取/写入 FLASH 的功能。
 
 # WEEK13_BEAR_SPI_I2C
 
-调用函数读取光照传感器数据，控制小熊派开发板上的 LED（PC13），控制智慧农业板上的灯（PB9）。
+I2C 通信实验。调用函数读取光照传感器数据，控制小熊派开发板上的 LED（PC13），控制智慧农业板上的灯（PB9）。

@@ -1,0 +1,123 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a b, c, LIC=WHYH9-4SPF1-JJS6S-LRT4P-D4AUT-09S3C
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  E:\DevSdks\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+E:\DevProjects\embedded-learning\WEEK14_SPI\MDK-ARM\WEEK14_SPI.uvprojx
+Project File Date:  12/07/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'E:\DevSdks\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'WEEK14_SPI'
+compiling usart.c...
+assembling startup_stm32l431xx.s...
+../Core/Src/main.c(107): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+                PutChinese_strings(10, 150, "Ö£<C8><CB><E4><E6><CD><F4><E8><F7><BA><C6>", 0);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c(107): warning: passing 'char[13]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                PutChinese_strings(10, 150, "Ö£<C8><CB><E4><E6><CD><F4><E8><F7><BA><C6>", 0);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Hardware/LCD\lcd.h(78): note: passing argument to parameter 'str' here
+void PutChinese_strings(uint16_t Xpos,uint16_t Ypos,uint8_t *str,uint8_t mode);
+                                                             ^
+../Core/Src/main.c(108): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+                printf("Ö£<C8><CB><E4>æ¡¢<CD><F4><E8><F7><BA><C6>\r\n");
+                        ^~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling main.c...
+compiling stm32l4xx_it.c...
+compiling spi.c...
+compiling gpio.c...
+compiling stm32l4xx_hal_msp.c...
+compiling stm32l4xx_hal_rcc.c...
+compiling stm32l4xx_hal_i2c_ex.c...
+compiling stm32l4xx_hal_flash.c...
+compiling stm32l4xx_hal_spi_ex.c...
+compiling stm32l4xx_hal_spi.c...
+compiling stm32l4xx_hal.c...
+compiling stm32l4xx_hal_rcc_ex.c...
+compiling stm32l4xx_hal_flash_ramfunc.c...
+compiling stm32l4xx_hal_pwr.c...
+compiling stm32l4xx_hal_dma.c...
+compiling stm32l4xx_hal_flash_ex.c...
+compiling stm32l4xx_hal_dma_ex.c...
+compiling stm32l4xx_hal_gpio.c...
+compiling stm32l4xx_hal_pwr_ex.c...
+compiling stm32l4xx_hal_tim.c...
+compiling stm32l4xx_hal_tim_ex.c...
+compiling stm32l4xx_hal_i2c.c...
+compiling stm32l4xx_hal_exti.c...
+compiling stm32l4xx_hal_uart_ex.c...
+compiling stm32l4xx_hal_cortex.c...
+compiling system_stm32l4xx.c...
+compiling stm32l4xx_hal_uart.c...
+../Hardware/LCD/lcd.c(829): warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+            if ( (tmp_char >> 15-j) & 0x01 == 0x01)
+                           ~~ ~~^~
+../Hardware/LCD/lcd.c(829): note: place parentheses around the '-' expression to silence this warning
+            if ( (tmp_char >> 15-j) & 0x01 == 0x01)
+                                ^
+                              (   )
+../Hardware/LCD/lcd.c(829): warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+            if ( (tmp_char >> 15-j) & 0x01 == 0x01)
+                                    ^~~~~~~~~~~~~~
+../Hardware/LCD/lcd.c(829): note: place parentheses around the '==' expression to silence this warning
+            if ( (tmp_char >> 15-j) & 0x01 == 0x01)
+                                    ^
+                                      (           )
+../Hardware/LCD/lcd.c(829): note: place parentheses around the & expression to evaluate it first
+            if ( (tmp_char >> 15-j) & 0x01 == 0x01)
+                                    ^
+                 (                        )
+2 warnings generated.
+compiling lcd.c...
+compiling HzLib.c...
+linking...
+Program Size: Code=16560 RO-data=236472 RW-data=20 ZI-data=2420  
+FromELF: creating hex file...
+"WEEK14_SPI\WEEK14_SPI.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L4xx_DFP.2.6.1.pack
+                Keil.STM32L4xx_DFP.2.6.1
+                STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_WEEK14_SPI
+  E:/DevSdks/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  E:/DevSdks/ARM/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
