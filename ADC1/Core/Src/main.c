@@ -107,8 +107,8 @@ int main(void)
 		if (HAL_GPIO_ReadPin(S4_GPIO_Port, S4_Pin) == GPIO_PIN_RESET) {
 			HAL_Delay(20);
 			// if (HAL_GPIO_ReadPin(S4_GPIO_Port, S4_Pin) == GPIO_PIN_RESET) {
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-				dacValue += 200;
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+			dacValue += 200;
 			HAL_DAC_SetValue(&hdac1, DAC1_CHANNEL_2, DAC_ALIGN_12B_R, dacValue);
 			// }
 			printf("dacValue = %d, adcValue = %d, voltage = %f\n", dacValue, adcValue, voltage);
@@ -116,16 +116,13 @@ int main(void)
 		if (HAL_GPIO_ReadPin(S3_GPIO_Port, S3_Pin) == GPIO_PIN_RESET) {
 			HAL_Delay(20);
 			// if (HAL_GPIO_ReadPin(S3_GPIO_Port, S3_Pin) == GPIO_PIN_RESET) {  
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-				dacValue -= 200;
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+			dacValue -= 200;
 			HAL_DAC_SetValue(&hdac1, DAC1_CHANNEL_2, DAC_ALIGN_12B_R, dacValue);
 			// }
 			printf("dacValue = %d, adcValue = %d, voltage = %f\n", dacValue, adcValue, voltage);
 		}
-		
-
 		voltage = adcValue * 3.3 / 4096;
-		
   }
   /* USER CODE END 3 */
 }
