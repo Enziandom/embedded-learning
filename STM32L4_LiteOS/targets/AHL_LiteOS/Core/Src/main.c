@@ -186,8 +186,8 @@ int main(void)
 	if(uwRet != LOS_OK)
 		return LOS_NOK;
 	
-	uwRet = creat_task_off();
 	uwRet = creat_task_on();
+	uwRet = creat_task_off();
 
 	if(uwRet != LOS_OK)
 		return LOS_NOK;

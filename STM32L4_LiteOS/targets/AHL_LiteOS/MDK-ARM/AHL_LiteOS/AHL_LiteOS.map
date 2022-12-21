@@ -32,8 +32,8 @@ Section Cross References
     main.o(i.main) refers to gpio.o(i.MX_GPIO_Init) for MX_GPIO_Init
     main.o(i.main) refers to usart.o(i.MX_USART2_UART_Init) for MX_USART2_UART_Init
     main.o(i.main) refers to los_init.o(i.LOS_KernelInit) for LOS_KernelInit
-    main.o(i.main) refers to main.o(i.creat_task_off) for creat_task_off
     main.o(i.main) refers to main.o(i.creat_task_on) for creat_task_on
+    main.o(i.main) refers to main.o(i.creat_task_off) for creat_task_off
     main.o(i.main) refers to los_init.o(i.LOS_Start) for LOS_Start
     main.o(i.task) refers to printf8.o(i.__0printf$8) for __2printf
     main.o(i.task) refers to stm32l4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
