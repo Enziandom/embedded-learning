@@ -1598,4 +1598,3 @@ LITE_OS_SEC_TEXT VOID osTaskSwitchImpurePtr(VOID)
 }
 #endif /* __cplusplus */
 #endif /* __cplusplus */
-

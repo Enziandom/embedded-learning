@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp --branchpatch=sdcomp-29491-629360
+--cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
 "ahl_liteos\startup_stm32l431xx.o"
 "ahl_liteos\main.o"
 "ahl_liteos\gpio.o"

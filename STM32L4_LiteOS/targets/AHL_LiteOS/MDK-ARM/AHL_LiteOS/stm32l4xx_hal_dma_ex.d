@@ -6,7 +6,7 @@ ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Include/core_cm4.h
-ahl_liteos\stm32l4xx_hal_dma_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ahl_liteos\stm32l4xx_hal_dma_ex.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Include/cmsis_version.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-ahl_liteos\stm32l4xx_hal_dma_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ahl_liteos\stm32l4xx_hal_dma_ex.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h
 ahl_liteos\stm32l4xx_hal_dma_ex.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h

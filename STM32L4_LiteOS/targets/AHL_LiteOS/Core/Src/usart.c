@@ -123,9 +123,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
-int fputc (int ch,FILE* f){
-	uint8_t temp[1]={ch};
-	HAL_UART_Transmit(&huart2,temp,1,2);
+int fputc (int ch, FILE* f){
+	uint8_t temp[1] = {ch};
+	HAL_UART_Transmit(&huart2, temp, 1, 2);
 	return HAL_OK;
 }
 /* USER CODE END 1 */

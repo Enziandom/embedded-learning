@@ -1,6 +1,6 @@
 ahl_liteos\los_slab.o: ..\..\..\kernel\base\mem\common\los_slab.c
-ahl_liteos\los_slab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-ahl_liteos\los_slab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ahl_liteos\los_slab.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ahl_liteos\los_slab.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ahl_liteos\los_slab.o: ..\..\..\kernel\base\include\los_slab.ph
 ahl_liteos\los_slab.o: ..\..\..\kernel\include\los_base.h
 ahl_liteos\los_slab.o: ..\OS_CONFIG\los_builddef.h
@@ -22,7 +22,7 @@ ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h
 ahl_liteos\los_slab.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-ahl_liteos\los_slab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ahl_liteos\los_slab.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h
@@ -38,9 +38,9 @@ ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
 ahl_liteos\los_slab.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
-ahl_liteos\los_slab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+ahl_liteos\los_slab.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ahl_liteos\los_slab.o: ..\OS_CONFIG\los_printf.h
-ahl_liteos\los_slab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+ahl_liteos\los_slab.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ahl_liteos\los_slab.o: ..\..\..\kernel\include\los_list.h
 ahl_liteos\los_slab.o: ..\..\..\kernel\include\los_errno.h
 ahl_liteos\los_slab.o: ..\..\..\kernel\include\los_err.h

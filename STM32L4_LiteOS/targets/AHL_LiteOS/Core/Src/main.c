@@ -59,8 +59,6 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void task(void)
 {
-	printf("LiteOS Task Start! \n");
-	
 	while(1)
 	{
 		printf("Green Light On\n");
@@ -73,15 +71,75 @@ void task(void)
 	}
 }
 
+void task_off(void)
+{
+	while(1)
+	{
+		printf("Task Off: Green Light Off\n");
+		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+		LOS_TaskDelay(1500);
+	}
+}
+
+void task_on(void)
+{
+	while(1)
+	{
+		printf("TASK ON: Green Light On\n");
+		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+		LOS_TaskDelay(800);
+	}
+}
+
+UINT32 creat_task_off()
+{
+	UINT32 uwRet = LOS_OK;
+	UINT32 g_TskHandle;
+	TSK_INIT_PARAM_S task_init_param;
+
+	task_init_param.usTaskPrio = 0;
+	task_init_param.pcName = "task_off";
+	task_init_param.pfnTaskEntry = (TSK_ENTRY_FUNC) task_off;
+	task_init_param.uwStackSize = 0x200;
+	
+	uwRet = LOS_TaskCreate(&g_TskHandle, &task_init_param);
+	if(LOS_OK != uwRet)
+	{
+		return uwRet;
+		
+	}
+	return uwRet;
+}
+
+UINT32 creat_task_on()
+{
+	UINT32 uwRet = LOS_OK;
+	UINT32 g_TskHandle;
+	TSK_INIT_PARAM_S task_init_param;
+	
+	task_init_param.usTaskPrio = 0;
+	task_init_param.pcName = "task_on";
+	task_init_param.pfnTaskEntry = (TSK_ENTRY_FUNC) task_on;
+	task_init_param.uwStackSize = 0x200;
+	
+	uwRet = LOS_TaskCreate(&g_TskHandle, &task_init_param);
+	if(LOS_OK != uwRet)
+	{
+		return uwRet;
+		
+	}
+	return uwRet;
+}
+
 UINT32 creat_task()
 {
 	UINT32 uwRet = LOS_OK;
 	UINT32 g_TskHandle;
 	TSK_INIT_PARAM_S task_init_param;
-	task_init_param.usTaskPrio=0;
-	task_init_param.pcName="task";
-	task_init_param.pfnTaskEntry=(TSK_ENTRY_FUNC)task;
-	task_init_param.uwStackSize=0x200;
+	task_init_param.usTaskPrio = 0 ;
+	task_init_param.pcName = "task";
+	task_init_param.pfnTaskEntry = (TSK_ENTRY_FUNC) task;
+	task_init_param.uwStackSize = 0x200;
 	
 	uwRet = LOS_TaskCreate(&g_TskHandle,&task_init_param);
 	if(LOS_OK != uwRet)
@@ -91,6 +149,7 @@ UINT32 creat_task()
 	}
 	return uwRet;
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -127,7 +186,9 @@ int main(void)
 	if(uwRet != LOS_OK)
 		return LOS_NOK;
 	
-	uwRet = creat_task();
+	uwRet = creat_task_off();
+	uwRet = creat_task_on();
+
 	if(uwRet != LOS_OK)
 		return LOS_NOK;
 	

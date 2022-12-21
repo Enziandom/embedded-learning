@@ -7,7 +7,7 @@ ahl_liteos\cmsis_liteos.o: ..\OS_CONFIG\target_config.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Include/core_cm4.h
-ahl_liteos\cmsis_liteos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ahl_liteos\cmsis_liteos.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Include/cmsis_version.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -19,7 +19,7 @@ ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-ahl_liteos\cmsis_liteos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ahl_liteos\cmsis_liteos.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h
@@ -35,13 +35,13 @@ ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
 ahl_liteos\cmsis_liteos.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
-ahl_liteos\cmsis_liteos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-ahl_liteos\cmsis_liteos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ahl_liteos\cmsis_liteos.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+ahl_liteos\cmsis_liteos.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ahl_liteos\cmsis_liteos.o: ..\..\..\osdepends\liteos\cmsis\2.0/cmsis_liteos2.c
 ahl_liteos\cmsis_liteos.o: ..\..\..\osdepends\liteos\cmsis\cmsis_os.h
 ahl_liteos\cmsis_liteos.o: ..\..\..\osdepends\liteos\cmsis\2.0/cmsis_os2.h
 ahl_liteos\cmsis_liteos.o: ..\OS_CONFIG\los_printf.h
-ahl_liteos\cmsis_liteos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+ahl_liteos\cmsis_liteos.o: E:\DevSdks\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ahl_liteos\cmsis_liteos.o: ..\..\..\kernel\include\los_event.h
 ahl_liteos\cmsis_liteos.o: ..\..\..\kernel\include\los_base.h
 ahl_liteos\cmsis_liteos.o: ..\..\..\kernel\include\los_list.h

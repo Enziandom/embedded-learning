@@ -601,13 +601,13 @@ ARM Macro Assembler    Page 10
   387 0000001C                 END
               00000000 
               00000000 
-Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=interwork -
--depend=ahl_liteos\startup_stm32l431xx.d -oahl_liteos\startup_stm32l431xx.o -I.
-\RTE\_AHL_LiteOS -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include -IC:\Keil_
-v5\ARM\PACK\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4xx\Include 
---predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 525" --pred
-efine="_RTE_ SETA 1" --predefine="STM32L431xx SETA 1" --list=startup_stm32l431x
-x.lst startup_stm32l431xx.s
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=interwor
+k --depend=ahl_liteos\startup_stm32l431xx.d -oahl_liteos\startup_stm32l431xx.o 
+-I.\RTE\_AHL_LiteOS -IE:\DevSdks\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include -
+IE:\DevSdks\ARM\Packs\Keil\STM32L4xx_DFP\2.6.1\Drivers\CMSIS\Device\ST\STM32L4x
+x\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 5
+37" --predefine="_RTE_ SETA 1" --predefine="STM32L431xx SETA 1" --predefine="_R
+TE_ SETA 1" --list=startup_stm32l431xx.lst startup_stm32l431xx.s
 
 
 
