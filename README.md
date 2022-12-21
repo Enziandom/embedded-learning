@@ -78,3 +78,7 @@ WEEK11_ADC 通过金葫芦实现。ADC1 通过小熊派实现。
 # WEEK13_BEAR_SPI_I2C
 
 I2C 通信实验。调用函数读取光照传感器数据，控制小熊派开发板上的 LED（PC13），控制智慧农业板上的灯（PB9）。
+
+# STM32L4_LiteOS
+
+STM32L431 移植 LiteOS。
