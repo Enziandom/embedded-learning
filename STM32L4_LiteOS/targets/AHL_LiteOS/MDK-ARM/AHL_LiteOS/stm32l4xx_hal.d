@@ -20,6 +20,9 @@ ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gp
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h
+ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h
+ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h
+ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc_ex.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h
@@ -28,5 +31,7 @@ ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h
+ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h
+ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
 ahl_liteos\stm32l4xx_hal.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
