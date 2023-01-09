@@ -3,7 +3,7 @@
 <title>Static Call Graph - [AHL_LiteOS\AHL_LiteOS.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image AHL_LiteOS\AHL_LiteOS.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Jan 07 18:51:23 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jan 09 19:49:31 2023
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -17,7 +17,7 @@ Mutually Recursive functions
  <LI><a href="#[3]">MemManage_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">MemManage_Handler</a><BR>
  <LI><a href="#[1]">NMI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1]">NMI_Handler</a><BR>
  <LI><a href="#[5]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[5]">UsageFault_Handler</a><BR>
- <LI><a href="#[54]">osIdleTask</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[54]">osIdleTask</a><BR>
+ <LI><a href="#[55]">osIdleTask</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[55]">osIdleTask</a><BR>
 </UL>
 <P>
 <H3>
@@ -68,12 +68,13 @@ Function Pointers
  <LI><a href="#[3c]">LPTIM1_IRQHandler</a> from startup_stm32l431xx.o(.text) referenced from startup_stm32l431xx.o(RESET)
  <LI><a href="#[3d]">LPTIM2_IRQHandler</a> from startup_stm32l431xx.o(.text) referenced from startup_stm32l431xx.o(RESET)
  <LI><a href="#[40]">LPUART1_IRQHandler</a> from startup_stm32l431xx.o(.text) referenced from startup_stm32l431xx.o(RESET)
- <LI><a href="#[59]">Main_Task</a> from main.o(i.Main_Task) referenced from main.o(i.main)
+ <LI><a href="#[5a]">Main_Task</a> from main.o(i.Main_Task) referenced from main.o(i.main)
  <LI><a href="#[3]">MemManage_Handler</a> from stm32l4xx_it.o(i.MemManage_Handler) referenced from startup_stm32l431xx.o(RESET)
  <LI><a href="#[1]">NMI_Handler</a> from stm32l4xx_it.o(i.NMI_Handler) referenced from startup_stm32l431xx.o(RESET)
- <LI><a href="#[57]">On_All_LED_Task</a> from main.o(i.On_All_LED_Task) referenced from main.o(i.Main_Task)
- <LI><a href="#[55]">On_Flashing_LED_Task</a> from main.o(i.On_Flashing_LED_Task) referenced from main.o(i.Main_Task)
- <LI><a href="#[56]">On_Get_Tempr_Task</a> from main.o(i.On_Get_Tempr_Task) referenced from main.o(i.Main_Task)
+ <LI><a href="#[58]">On_All_LED_Task</a> from main.o(i.On_All_LED_Task) referenced from main.o(i.Main_Task)
+ <LI><a href="#[56]">On_Flashing_LED_Task</a> from main.o(i.On_Flashing_LED_Task) referenced from main.o(i.Main_Task)
+ <LI><a href="#[57]">On_Get_Tempr_Task</a> from main.o(i.On_Get_Tempr_Task) referenced from main.o(i.Main_Task)
+ <LI><a href="#[54]">On_Tim2_Task</a> from main.o(i.On_Tim2_Task) referenced from main.o(i.HAL_TIM_PeriodElapsedCallback)
  <LI><a href="#[b]">PVD_PVM_IRQHandler</a> from startup_stm32l431xx.o(.text) referenced from startup_stm32l431xx.o(RESET)
  <LI><a href="#[8]">PendSV_Handler</a> from los_dispatch_keil.o(.text) referenced from startup_stm32l431xx.o(RESET)
  <LI><a href="#[41]">QUADSPI_IRQHandler</a> from startup_stm32l431xx.o(.text) referenced from startup_stm32l431xx.o(RESET)
@@ -109,15 +110,15 @@ Function Pointers
  <LI><a href="#[4c]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_stm32l431xx.o(.text)
  <LI><a href="#[4f]">_scanf_char_input</a> from scanf_char.o(.text) referenced from scanf_char.o(.text)
  <LI><a href="#[4d]">fgetc</a> from usart.o(i.fgetc) referenced from scanf_char_file.o(.text)
- <LI><a href="#[58]">fputc</a> from usart.o(i.fputc) referenced from printfa.o(i.__0printf)
+ <LI><a href="#[59]">fputc</a> from usart.o(i.fputc) referenced from printfa.o(i.__0printf)
  <LI><a href="#[50]">isspace</a> from isspace_c.o(.text) referenced from scanf_char.o(.text)
  <LI><a href="#[4a]">main</a> from main.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
- <LI><a href="#[54]">osIdleTask</a> from los_task.o(i.osIdleTask) referenced from los_task.o(i.LOS_TaskCreateOnly)
- <LI><a href="#[54]">osIdleTask</a> from los_task.o(i.osIdleTask) referenced from los_task.o(i.osIdleTaskCreate)
- <LI><a href="#[5a]">osSwTmrTask</a> from los_swtmr.o(i.osSwTmrTask) referenced from los_swtmr.o(i.osSwTmrTaskCreate)
- <LI><a href="#[5d]">osTaskEntry</a> from los_task.o(i.osTaskEntry) referenced from los_hw.o(i.osTskStackInit)
- <LI><a href="#[5c]">osTaskExit</a> from los_hw.o(i.osTaskExit) referenced from los_hw.o(i.osTskStackInit)
- <LI><a href="#[5b]">osTaskSwitchCheck</a> from los_task.o(i.osTaskSwitchCheck) referenced from los_task.o(i.osTaskMonInit)
+ <LI><a href="#[55]">osIdleTask</a> from los_task.o(i.osIdleTask) referenced from los_task.o(i.LOS_TaskCreateOnly)
+ <LI><a href="#[55]">osIdleTask</a> from los_task.o(i.osIdleTask) referenced from los_task.o(i.osIdleTaskCreate)
+ <LI><a href="#[5b]">osSwTmrTask</a> from los_swtmr.o(i.osSwTmrTask) referenced from los_swtmr.o(i.osSwTmrTaskCreate)
+ <LI><a href="#[5e]">osTaskEntry</a> from los_task.o(i.osTaskEntry) referenced from los_hw.o(i.osTskStackInit)
+ <LI><a href="#[5d]">osTaskExit</a> from los_hw.o(i.osTaskExit) referenced from los_hw.o(i.osTskStackInit)
+ <LI><a href="#[5c]">osTaskSwitchCheck</a> from los_task.o(i.osTaskSwitchCheck) referenced from los_task.o(i.osTaskMonInit)
 </UL>
 <P>
 <H3>
@@ -126,12 +127,12 @@ Global Symbols
 <P><STRONG><a name="[4c]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(.text)
 </UL>
-<P><STRONG><a name="[5e]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[5f]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[75]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[76]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32l431xx.o(.text))
@@ -324,272 +325,272 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32l431xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[e8]"></a>LOS_StartToRun</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<P><STRONG><a name="[e7]"></a>LOS_StartToRun</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
 </UL>
 
-<P><STRONG><a name="[d9]"></a>LOS_IntLock</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[d8]"></a>LOS_IntLock</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[dc]"></a>LOS_IntRestore</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[db]"></a>LOS_IntRestore</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[e5]"></a>osTaskSchedule</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<P><STRONG><a name="[e4]"></a>osTaskSchedule</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, los_dispatch_keil.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[60]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, uldiv.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[61]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, uldiv.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-</UL>
-
-<P><STRONG><a name="[113]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSwitchCheck
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[64]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
+<P><STRONG><a name="[114]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSwitchCheck
 </UL>
 
-<P><STRONG><a name="[63]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
-</UL>
-<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapInit
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMonInit
-</UL>
-
-<P><STRONG><a name="[94]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetInit
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+<P><STRONG><a name="[65]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
 </UL>
 
-<P><STRONG><a name="[65]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[64]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapInit
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMonInit
+</UL>
+
+<P><STRONG><a name="[95]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetInit
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+</UL>
+
+<P><STRONG><a name="[66]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
 <P><STRONG><a name="[fc]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, strcmp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
 </UL>
 
-<P><STRONG><a name="[66]"></a>__0scanf</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, __0scanf.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char_file
+<P><STRONG><a name="[67]"></a>__0scanf</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, __0scanf.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char_file
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
-</UL>
-
-<P><STRONG><a name="[78]"></a>_scanf_string</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, _scanf_str.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
 </UL>
 
-<P><STRONG><a name="[68]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 0 bytes, dmul.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[79]"></a>_scanf_string</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, _scanf_str.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf
 </UL>
 
-<P><STRONG><a name="[6a]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 0 bytes, ddiv.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<P><STRONG><a name="[69]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 0 bytes, dmul.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-</UL>
-
-<P><STRONG><a name="[6c]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, dfltui.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[6b]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 0 bytes, ddiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-</UL>
-
-<P><STRONG><a name="[fd]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[6e]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, d2f.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
+<P><STRONG><a name="[6d]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, dfltui.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
-</UL>
-
-<P><STRONG><a name="[10a]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
 </UL>
 
-<P><STRONG><a name="[62]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[6e]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[61]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<P><STRONG><a name="[ff]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
 </UL>
 
-<P><STRONG><a name="[67]"></a>__vfscanf_char_file</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, scanf_char_file.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
+<P><STRONG><a name="[6f]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, d2f.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0scanf
-</UL>
-
-<P><STRONG><a name="[6f]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
 </UL>
 
-<P><STRONG><a name="[6b]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, depilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[10c]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[69]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 0 bytes, depilogue.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[63]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[71]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[62]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[73]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[68]"></a>__vfscanf_char_file</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, scanf_char_file.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
+</UL>
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0scanf
 </UL>
 
-<P><STRONG><a name="[74]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[70]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
-<P><STRONG><a name="[107]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[6c]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, depilogue.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[5f]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<P><STRONG><a name="[6a]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 0 bytes, depilogue.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+
+<P><STRONG><a name="[72]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[74]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+
+<P><STRONG><a name="[75]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+
+<P><STRONG><a name="[109]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[60]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
 <P><STRONG><a name="[4e]"></a>__backspace</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fgetc_b.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> scanf_char_file.o(.text)
 </UL>
-<P><STRONG><a name="[72]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[73]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[70]"></a>__vfscanf_char</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, scanf_char.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf
+<P><STRONG><a name="[71]"></a>__vfscanf_char</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, scanf_char.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char_file
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char_file
 </UL>
 
 <P><STRONG><a name="[50]"></a>isspace</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, isspace_c.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ctype_lookup
+<BR><BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ctype_lookup
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> scanf_char.o(.text)
 </UL>
-<P><STRONG><a name="[76]"></a>__vfscanf</STRONG> (Thumb, 808 bytes, Stack size 0 bytes, _scanf.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_string
+<P><STRONG><a name="[77]"></a>__vfscanf</STRONG> (Thumb, 808 bytes, Stack size 0 bytes, _scanf.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_string
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
 </UL>
 
-<P><STRONG><a name="[77]"></a>__ctype_lookup</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, ctype_c.o(.text))
+<P><STRONG><a name="[78]"></a>__ctype_lookup</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, ctype_c.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isspace
 </UL>
 
 <P><STRONG><a name="[1c]"></a>ADC1_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.ADC1_IRQHandler))
-<BR><BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
 <P><STRONG><a name="[51]"></a>ADC_DMAConvCplt</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.ADC_DMAConvCplt))
-<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsTriggerSourceSWStart
+<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsTriggerSourceSWStart
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32l4xx_hal_adc.o(i.HAL_ADC_Start_DMA)
 </UL>
 <P><STRONG><a name="[53]"></a>ADC_DMAError</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.ADC_DMAError))
-<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
+<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32l4xx_hal_adc.o(i.HAL_ADC_Start_DMA)
 </UL>
 <P><STRONG><a name="[52]"></a>ADC_DMAHalfConvCplt</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.ADC_DMAHalfConvCplt))
-<BR><BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvHalfCpltCallback
+<BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvHalfCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32l4xx_hal_adc.o(i.HAL_ADC_Start_DMA)
 </UL>
-<P><STRONG><a name="[7e]"></a>ADC_Enable</STRONG> (Thumb, 154 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.ADC_Enable))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<P><STRONG><a name="[7f]"></a>ADC_Enable</STRONG> (Thumb, 154 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.ADC_Enable))
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 </UL>
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.BusFault_Handler))
@@ -599,178 +600,172 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[80]"></a>Create_LOS_Task</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, main.o(i.Create_LOS_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[81]"></a>Create_LOS_Task</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, main.o(i.Create_LOS_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
 <P><STRONG><a name="[15]"></a>DMA1_Channel1_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.DMA1_Channel1_IRQHandler))
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_IRQHandler
+<BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[84]"></a>Delete_LOS_Task</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, main.o(i.Delete_LOS_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[85]"></a>Delete_LOS_Task</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, main.o(i.Delete_LOS_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
 </UL>
 
-<P><STRONG><a name="[96]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<P><STRONG><a name="[97]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[8c]"></a>HAL_ADCEx_EndOfSamplingCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_EndOfSamplingCallback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<P><STRONG><a name="[8d]"></a>HAL_ADCEx_EndOfSamplingCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_EndOfSamplingCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8d]"></a>HAL_ADCEx_InjectedConvCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_InjectedConvCpltCallback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<P><STRONG><a name="[8e]"></a>HAL_ADCEx_InjectedConvCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_InjectedConvCpltCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[91]"></a>HAL_ADCEx_InjectedQueueOverflowCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_InjectedQueueOverflowCallback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<P><STRONG><a name="[92]"></a>HAL_ADCEx_InjectedQueueOverflowCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_InjectedQueueOverflowCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8f]"></a>HAL_ADCEx_LevelOutOfWindow2Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_LevelOutOfWindow2Callback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<P><STRONG><a name="[90]"></a>HAL_ADCEx_LevelOutOfWindow2Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_LevelOutOfWindow2Callback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[90]"></a>HAL_ADCEx_LevelOutOfWindow3Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_LevelOutOfWindow3Callback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<P><STRONG><a name="[91]"></a>HAL_ADCEx_LevelOutOfWindow3Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc_ex.o(i.HAL_ADCEx_LevelOutOfWindow3Callback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[86]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 960 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConfigChannel))
-<BR><BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_SetOffsetState
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_SetChannelSamplingTime
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_GetOffsetChannel
+<P><STRONG><a name="[87]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 960 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConfigChannel))
+<BR><BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_SetOffsetState
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_SetChannelSamplingTime
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_GetOffsetChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[7c]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConvCpltCallback))
+<P><STRONG><a name="[7d]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConvCpltCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAConvCplt
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[7d]"></a>HAL_ADC_ConvHalfCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConvHalfCpltCallback))
+<P><STRONG><a name="[7e]"></a>HAL_ADC_ConvHalfCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ConvHalfCpltCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAHalfConvCplt
 </UL>
 
-<P><STRONG><a name="[7a]"></a>HAL_ADC_ErrorCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ErrorCallback))
+<P><STRONG><a name="[7b]"></a>HAL_ADC_ErrorCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_ErrorCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAError
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAConvCplt
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[79]"></a>HAL_ADC_IRQHandler</STRONG> (Thumb, 514 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_IRQHandler))
-<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_LevelOutOfWindowCallback
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_LevelOutOfWindow3Callback
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_LevelOutOfWindow2Callback
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_InjectedQueueOverflowCallback
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_InjectedConvCpltCallback
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_EndOfSamplingCallback
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsTriggerSourceSWStart
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
+<P><STRONG><a name="[7a]"></a>HAL_ADC_IRQHandler</STRONG> (Thumb, 514 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_IRQHandler))
+<BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_LevelOutOfWindowCallback
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_LevelOutOfWindow3Callback
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_LevelOutOfWindow2Callback
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_InjectedQueueOverflowCallback
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_InjectedConvCpltCallback
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_EndOfSamplingCallback
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsTriggerSourceSWStart
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[92]"></a>HAL_ADC_Init</STRONG> (Thumb, 400 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<P><STRONG><a name="[93]"></a>HAL_ADC_Init</STRONG> (Thumb, 400 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_INJ_IsConversionOngoing
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
-</UL>
-
-<P><STRONG><a name="[8e]"></a>HAL_ADC_LevelOutOfWindowCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_LevelOutOfWindowCallback))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[93]"></a>HAL_ADC_MspInit</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, adc.o(i.HAL_ADC_MspInit))
-<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+<P><STRONG><a name="[8f]"></a>HAL_ADC_LevelOutOfWindowCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_LevelOutOfWindowCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[9b]"></a>HAL_ADC_Start_DMA</STRONG> (Thumb, 162 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_Start_DMA))
-<BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
+<P><STRONG><a name="[94]"></a>HAL_ADC_MspInit</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, adc.o(i.HAL_ADC_MspInit))
+<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+</UL>
+
+<P><STRONG><a name="[9c]"></a>HAL_ADC_Start_DMA</STRONG> (Thumb, 162 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.HAL_ADC_Start_DMA))
+<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ADC_REG_IsConversionOngoing
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[83]"></a>HAL_DMA_IRQHandler</STRONG> (Thumb, 186 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_IRQHandler))
+<P><STRONG><a name="[84]"></a>HAL_DMA_IRQHandler</STRONG> (Thumb, 186 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_IRQHandler))
 <BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[98]"></a>HAL_DMA_Init</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<P><STRONG><a name="[99]"></a>HAL_DMA_Init</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 </UL>
 
-<P><STRONG><a name="[9c]"></a>HAL_DMA_Start_IT</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_Start_IT))
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetConfig
+<P><STRONG><a name="[9d]"></a>HAL_DMA_Start_IT</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.HAL_DMA_Start_IT))
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
-</UL>
-
-<P><STRONG><a name="[9e]"></a>HAL_Delay</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_Delay))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 </UL>
 
-<P><STRONG><a name="[97]"></a>HAL_GPIO_Init</STRONG> (Thumb, 434 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<P><STRONG><a name="[98]"></a>HAL_GPIO_Init</STRONG> (Thumb, 434 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[bb]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<P><STRONG><a name="[f8]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
+<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_All_LED_Task
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Tim2_Task
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_All_LED_Task
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
 </UL>
 
-<P><STRONG><a name="[7f]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_GetTick))
+<P><STRONG><a name="[80]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_GetTick))
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI1_Config
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
 
 <P><STRONG><a name="[9f]"></a>HAL_Init</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_Init))
@@ -783,7 +778,7 @@ Global Symbols
 
 <P><STRONG><a name="[a1]"></a>HAL_InitTick</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_InitTick))
 <BR><BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
@@ -794,70 +789,70 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[9a]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
+<P><STRONG><a name="[9b]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 </UL>
 
-<P><STRONG><a name="[99]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
+<P><STRONG><a name="[9a]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
 <BR><BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 </UL>
 
 <P><STRONG><a name="[a0]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
 <BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[101]"></a>HAL_PWREx_ControlVoltageScaling</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling))
-<BR><BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[103]"></a>HAL_PWREx_ControlVoltageScaling</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling))
+<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[fe]"></a>HAL_PWREx_GetVoltageRange</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_GetVoltageRange))
+<P><STRONG><a name="[100]"></a>HAL_PWREx_GetVoltageRange</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_GetVoltageRange))
 <BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_SetFlashLatencyFromMSIRange
 </UL>
 
-<P><STRONG><a name="[95]"></a>HAL_RCCEx_PeriphCLKConfig</STRONG> (Thumb, 682 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig))
+<P><STRONG><a name="[96]"></a>HAL_RCCEx_PeriphCLKConfig</STRONG> (Thumb, 682 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig))
 <BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI1_Config
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 </UL>
 
 <P><STRONG><a name="[a6]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 304 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-</UL>
-
-<P><STRONG><a name="[102]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq))
-<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[103]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq))
-<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<P><STRONG><a name="[104]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq))
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+</UL>
+
+<P><STRONG><a name="[105]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq))
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[a7]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
 <BR><BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[a8]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1366 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_SetFlashLatencyFromMSIRange
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[a3]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_SYSTICK_Config))
@@ -890,14 +885,18 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ab]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, tim.o(i.HAL_TIM_Base_MspInit))
-<BR><BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<BR><BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
-<P><STRONG><a name="[10b]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
-<BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[fd]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+</UL>
+
+<P><STRONG><a name="[fe]"></a>HAL_TIM_Base_Stop_IT</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_Base_Stop_IT))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
 </UL>
 
 <P><STRONG><a name="[ad]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_ConfigClockSource))
@@ -934,9 +933,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
 
-<P><STRONG><a name="[b6]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, main.o(i.HAL_TIM_PeriodElapsedCallback))
-<BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[b6]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(i.HAL_TIM_PeriodElapsedCallback))
+<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
@@ -945,36 +943,36 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
 
-<P><STRONG><a name="[bc]"></a>HAL_UART_Init</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_AdvFeatureConfig
+<P><STRONG><a name="[bb]"></a>HAL_UART_Init</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_AdvFeatureConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 </UL>
 
-<P><STRONG><a name="[bd]"></a>HAL_UART_MspInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, usart.o(i.HAL_UART_MspInit))
-<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<P><STRONG><a name="[bc]"></a>HAL_UART_MspInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, usart.o(i.HAL_UART_MspInit))
+<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[c1]"></a>HAL_UART_Receive</STRONG> (Thumb, 248 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Receive))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[c0]"></a>HAL_UART_Receive</STRONG> (Thumb, 248 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Receive))
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
 
-<P><STRONG><a name="[c3]"></a>HAL_UART_Transmit</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Transmit))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[c2]"></a>HAL_UART_Transmit</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Transmit))
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.HardFault_Handler))
@@ -984,197 +982,198 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[ec]"></a>LOS_Align</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_misc.o(i.LOS_Align))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[eb]"></a>LOS_Align</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_misc.o(i.LOS_Align))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[c4]"></a>LOS_KernelInit</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, los_init.o(i.LOS_KernelInit))
-<BR><BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceInit
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMonInit
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[c3]"></a>LOS_KernelInit</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, los_init.o(i.LOS_KernelInit))
+<BR><BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceInit
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMonInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d0]"></a>LOS_MemAlloc</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemAlloc))
-<BR><BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<P><STRONG><a name="[cf]"></a>LOS_MemAlloc</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemAlloc))
+<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-</UL>
-
-<P><STRONG><a name="[d3]"></a>LOS_MemAllocAlign</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemAllocAlign))
-<BR><BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAllocAlign
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
 </UL>
 
-<P><STRONG><a name="[d5]"></a>LOS_MemFree</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemFree))
-<BR><BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
+<P><STRONG><a name="[d2]"></a>LOS_MemAllocAlign</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemAllocAlign))
+<BR><BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAllocAlign
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[d8]"></a>LOS_MemInit</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemInit))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapInit
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[d4]"></a>LOS_MemFree</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemFree))
+<BR><BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
-</UL>
-
-<P><STRONG><a name="[dd]"></a>LOS_QueueCreate</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueCreate))
-<BR><BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-</UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[de]"></a>LOS_QueueReadCopy</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueReadCopy))
-<BR><BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueReadParameterCheck
+<P><STRONG><a name="[d7]"></a>LOS_MemInit</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, los_memory.o(i.LOS_MemInit))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapInit
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
-</UL>
-
-<P><STRONG><a name="[e1]"></a>LOS_QueueWriteCopy</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueWriteCopy))
-<BR><BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWriteParameterCheck
-</UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
 </UL>
 
-<P><STRONG><a name="[e3]"></a>LOS_Schedule</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, los_hw.o(i.LOS_Schedule))
-<BR><BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
+<P><STRONG><a name="[dc]"></a>LOS_QueueCreate</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueCreate))
+<BR><BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 </UL>
 
-<P><STRONG><a name="[e6]"></a>LOS_Start</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, los_init.o(i.LOS_Start))
-<BR><BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickStart
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_StartToRun
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[dd]"></a>LOS_QueueReadCopy</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueReadCopy))
+<BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueReadParameterCheck
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
+</UL>
+
+<P><STRONG><a name="[e0]"></a>LOS_QueueWriteCopy</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_queue.o(i.LOS_QueueWriteCopy))
+<BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWriteParameterCheck
+</UL>
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+</UL>
+
+<P><STRONG><a name="[e2]"></a>LOS_Schedule</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, los_hw.o(i.LOS_Schedule))
+<BR><BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+</UL>
+
+<P><STRONG><a name="[e5]"></a>LOS_Start</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, los_init.o(i.LOS_Start))
+<BR><BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickStart
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_StartToRun
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[81]"></a>LOS_TaskCreate</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskCreate))
-<BR><BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[82]"></a>LOS_TaskCreate</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskCreate))
+<BR><BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
-</UL>
-
-<P><STRONG><a name="[e9]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 310 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskCreateOnly))
-<BR><BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Align
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
 </UL>
 
-<P><STRONG><a name="[ef]"></a>LOS_TaskDelay</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskDelay))
-<BR><BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<P><STRONG><a name="[e8]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 310 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskCreateOnly))
+<BR><BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Align
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
-</UL>
-
-<P><STRONG><a name="[85]"></a>LOS_TaskDelete</STRONG> (Thumb, 298 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskDelete))
-<BR><BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 </UL>
 
-<P><STRONG><a name="[f3]"></a>LOS_TaskYield</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskYield))
-<BR><BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueSize
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<P><STRONG><a name="[ee]"></a>LOS_TaskDelay</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskDelay))
+<BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
-</UL>
-
-<P><STRONG><a name="[121]"></a>LOS_TickCountGet</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, los_sys.o(i.LOS_TickCountGet))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Tim2_Task
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
 </UL>
 
-<P><STRONG><a name="[f6]"></a>MX_ADC1_Init</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, adc.o(i.MX_ADC1_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<P><STRONG><a name="[86]"></a>LOS_TaskDelete</STRONG> (Thumb, 298 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskDelete))
+<BR><BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueTop
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
+</UL>
+
+<P><STRONG><a name="[f2]"></a>LOS_TaskYield</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, los_task.o(i.LOS_TaskYield))
+<BR><BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueSize
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
+</UL>
+
+<P><STRONG><a name="[122]"></a>LOS_TickCountGet</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, los_sys.o(i.LOS_TickCountGet))
+<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
+</UL>
+
+<P><STRONG><a name="[f5]"></a>MX_ADC1_Init</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, adc.o(i.MX_ADC1_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f7]"></a>MX_DMA_Init</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, dma.o(i.MX_DMA_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<P><STRONG><a name="[f6]"></a>MX_DMA_Init</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, dma.o(i.MX_DMA_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f8]"></a>MX_GPIO_Init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, gpio.o(i.MX_GPIO_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<P><STRONG><a name="[f7]"></a>MX_GPIO_Init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, gpio.o(i.MX_GPIO_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1183,25 +1182,27 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[fb]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, usart.o(i.MX_USART2_UART_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[59]"></a>Main_Task</STRONG> (Thumb, 276 bytes, Stack size 0 bytes, main.o(i.Main_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
+<P><STRONG><a name="[5a]"></a>Main_Task</STRONG> (Thumb, 284 bytes, Stack size 0 bytes, main.o(i.Main_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Stop_IT
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0scanf
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0scanf
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
@@ -1219,43 +1220,50 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[57]"></a>On_All_LED_Task</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.On_All_LED_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<P><STRONG><a name="[58]"></a>On_All_LED_Task</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.On_All_LED_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.Main_Task)
 </UL>
-<P><STRONG><a name="[55]"></a>On_Flashing_LED_Task</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main.o(i.On_Flashing_LED_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[56]"></a>On_Flashing_LED_Task</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main.o(i.On_Flashing_LED_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.Main_Task)
 </UL>
-<P><STRONG><a name="[56]"></a>On_Get_Tempr_Task</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, main.o(i.On_Get_Tempr_Task))
-<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[57]"></a>On_Get_Tempr_Task</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, main.o(i.On_Get_Tempr_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.Main_Task)
+</UL>
+<P><STRONG><a name="[54]"></a>On_Tim2_Task</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, main.o(i.On_Tim2_Task))
+<BR><BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(i.HAL_TIM_PeriodElapsedCallback)
 </UL>
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.SVC_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_hwi.o(i.SysTick_Handler))
-<BR><BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR><BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[100]"></a>SystemClock_Config</STRONG> (Thumb, 118 bytes, Stack size 0 bytes, main.o(i.SystemClock_Config))
+<P><STRONG><a name="[102]"></a>SystemClock_Config</STRONG> (Thumb, 118 bytes, Stack size 0 bytes, main.o(i.SystemClock_Config))
 <BR><BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ControlVoltageScaling
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ControlVoltageScaling
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1276,32 +1284,32 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
-<P><STRONG><a name="[bf]"></a>UART_AdvFeatureConfig</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_AdvFeatureConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<P><STRONG><a name="[be]"></a>UART_AdvFeatureConfig</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_AdvFeatureConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[c0]"></a>UART_CheckIdleState</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_CheckIdleState))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[bf]"></a>UART_CheckIdleState</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_CheckIdleState))
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[be]"></a>UART_SetConfig</STRONG> (Thumb, 478 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_SetConfig))
+<P><STRONG><a name="[bd]"></a>UART_SetConfig</STRONG> (Thumb, 478 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_SetConfig))
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[c2]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<P><STRONG><a name="[c1]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, stm32l4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout))
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
 
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.UsageFault_Handler))
@@ -1311,453 +1319,451 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[104]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printfa.o(i.__0printf), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[106]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printfa.o(i.__0printf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[82]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0printf))
-<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSwitchCheck
+<P><STRONG><a name="[83]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0printf))
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Tim2_Task
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Get_Tempr_Task
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;On_Flashing_LED_Task
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main_Task
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delete_LOS_Task
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSwitchCheck
 </UL>
 
 <P><STRONG><a name="[4d]"></a>fgetc</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, usart.o(i.fgetc))
-<BR><BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
+<BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> scanf_char_file.o(.text)
 </UL>
-<P><STRONG><a name="[58]"></a>fputc</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, usart.o(i.fputc))
-<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<P><STRONG><a name="[59]"></a>fputc</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, usart.o(i.fputc))
+<BR><BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[4a]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[4a]"></a>main</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Create_LOS_Task
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[10c]"></a>osAlarmHeapInfo</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, los_heap.o(i.osAlarmHeapInfo))
-<BR><BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapStatisticsGet
+<P><STRONG><a name="[10d]"></a>osAlarmHeapInfo</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, los_heap.o(i.osAlarmHeapInfo))
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapStatisticsGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
-</UL>
-
-<P><STRONG><a name="[11c]"></a>osAtomicBitsetClearBit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetClearBit))
-<BR><BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
 </UL>
 
-<P><STRONG><a name="[119]"></a>osAtomicBitsetFindClearAndSet</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetFindClearAndSet))
-<BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorAlloc
+<P><STRONG><a name="[11d]"></a>osAtomicBitsetClearBit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetClearBit))
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
 </UL>
 
-<P><STRONG><a name="[11b]"></a>osAtomicBitsetGetBit</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetGetBit))
-<BR><BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
+<P><STRONG><a name="[11a]"></a>osAtomicBitsetFindClearAndSet</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetFindClearAndSet))
+<BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorAlloc
 </UL>
 
-<P><STRONG><a name="[10e]"></a>osAtomicBitsetInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetInit))
-<BR><BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
+<P><STRONG><a name="[11c]"></a>osAtomicBitsetGetBit</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetGetBit))
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
 </UL>
 
-<P><STRONG><a name="[d2]"></a>osHeapAlloc</STRONG> (Thumb, 228 bytes, Stack size 0 bytes, los_heap.o(i.osHeapAlloc))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapPrvGetNext
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[10f]"></a>osAtomicBitsetInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_slab.o(i.osAtomicBitsetInit))
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAllocAlign
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
 </UL>
 
-<P><STRONG><a name="[d4]"></a>osHeapAllocAlign</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, los_heap.o(i.osHeapAllocAlign))
-<BR><BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<P><STRONG><a name="[d1]"></a>osHeapAlloc</STRONG> (Thumb, 228 bytes, Stack size 0 bytes, los_heap.o(i.osHeapAlloc))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapPrvGetNext
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
-</UL>
-
-<P><STRONG><a name="[d7]"></a>osHeapFree</STRONG> (Thumb, 226 bytes, Stack size 0 bytes, los_heap.o(i.osHeapFree))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapPrvGetNext
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAllocAlign
 </UL>
 
-<P><STRONG><a name="[da]"></a>osHeapInit</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, los_heap.o(i.osHeapInit))
-<BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<P><STRONG><a name="[d3]"></a>osHeapAllocAlign</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, los_heap.o(i.osHeapAllocAlign))
+<BR><BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-</UL>
-
-<P><STRONG><a name="[10f]"></a>osHeapPrvGetNext</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, los_heap.o(i.osHeapPrvGetNext))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
 </UL>
 
-<P><STRONG><a name="[10d]"></a>osHeapStatisticsGet</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, los_heap.o(i.osHeapStatisticsGet))
-<BR><BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
+<P><STRONG><a name="[d6]"></a>osHeapFree</STRONG> (Thumb, 226 bytes, Stack size 0 bytes, los_heap.o(i.osHeapFree))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapPrvGetNext
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
 </UL>
 
-<P><STRONG><a name="[54]"></a>osIdleTask</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, los_task.o(i.osIdleTask))
-<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTask
+<P><STRONG><a name="[d9]"></a>osHeapInit</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, los_heap.o(i.osHeapInit))
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTask
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+</UL>
+
+<P><STRONG><a name="[110]"></a>osHeapPrvGetNext</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, los_heap.o(i.osHeapPrvGetNext))
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapFree
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+</UL>
+
+<P><STRONG><a name="[10e]"></a>osHeapStatisticsGet</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, los_heap.o(i.osHeapStatisticsGet))
+<BR><BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAlarmHeapInfo
+</UL>
+
+<P><STRONG><a name="[55]"></a>osIdleTask</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, los_task.o(i.osIdleTask))
+<BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTask
+</UL>
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTask
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> los_task.o(i.LOS_TaskCreateOnly)
 <LI> los_task.o(i.osIdleTaskCreate)
 </UL>
-<P><STRONG><a name="[cd]"></a>osIdleTaskCreate</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_task.o(i.osIdleTaskCreate))
-<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<P><STRONG><a name="[cc]"></a>osIdleTaskCreate</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_task.o(i.osIdleTaskCreate))
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
-</UL>
-
-<P><STRONG><a name="[f0]"></a>osIntNumGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_hwi.o(i.osIntNumGet))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWriteParameterCheck
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueReadParameterCheck
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[c5]"></a>osMemSystemInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, los_memory.o(i.osMemSystemInit))
-<BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
-</UL>
-
-<P><STRONG><a name="[c9]"></a>osMuxInit</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, los_mux.o(i.osMuxInit))
-<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<P><STRONG><a name="[ef]"></a>osIntNumGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_hwi.o(i.osIntNumGet))
+<BR><BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWriteParameterCheck
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueReadParameterCheck
 </UL>
 
-<P><STRONG><a name="[f1]"></a>osPriqueueDequeue</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueDequeue))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
+<P><STRONG><a name="[c4]"></a>osMemSystemInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, los_memory.o(i.osMemSystemInit))
+<BR><BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[ea]"></a>osPriqueueEnqueue</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueEnqueue))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<P><STRONG><a name="[c8]"></a>osMuxInit</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, los_mux.o(i.osMuxInit))
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[111]"></a>osPriqueueInit</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueInit))
-<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-</UL>
-
-<P><STRONG><a name="[f5]"></a>osPriqueueSize</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueSize))
-<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<P><STRONG><a name="[f0]"></a>osPriqueueDequeue</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueDequeue))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
 </UL>
 
-<P><STRONG><a name="[e4]"></a>osPriqueueTop</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueTop))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<P><STRONG><a name="[e9]"></a>osPriqueueEnqueue</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueEnqueue))
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
 </UL>
 
-<P><STRONG><a name="[ca]"></a>osQueueInit</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, los_queue.o(i.osQueueInit))
-<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<P><STRONG><a name="[112]"></a>osPriqueueInit</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueInit))
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
 </UL>
 
-<P><STRONG><a name="[e0]"></a>osQueueOperate</STRONG> (Thumb, 342 bytes, Stack size 0 bytes, los_queue.o(i.osQueueOperate))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
+<P><STRONG><a name="[f4]"></a>osPriqueueSize</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueSize))
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 </UL>
 
-<P><STRONG><a name="[eb]"></a>osSchedule</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_hw.o(i.osSchedule))
-<BR><BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
-</UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-</UL>
-
-<P><STRONG><a name="[c8]"></a>osSemInit</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, los_sem.o(i.osSemInit))
-<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<P><STRONG><a name="[e3]"></a>osPriqueueTop</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_priqueue.o(i.osPriqueueTop))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 </UL>
 
-<P><STRONG><a name="[118]"></a>osSlabAllocatorAlloc</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorAlloc))
-<BR><BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetFindClearAndSet
+<P><STRONG><a name="[c9]"></a>osQueueInit</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, los_queue.o(i.osQueueInit))
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
-</UL>
-
-<P><STRONG><a name="[11a]"></a>osSlabAllocatorFree</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorFree))
-<BR><BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetGetBit
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetClearBit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[11d]"></a>osSlabAllocatorNew</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorNew))
-<BR><BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetInit
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+<P><STRONG><a name="[df]"></a>osQueueOperate</STRONG> (Thumb, 342 bytes, Stack size 0 bytes, los_queue.o(i.osQueueOperate))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueBufferOperate
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
 </UL>
-<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
-</UL>
-
-<P><STRONG><a name="[11f]"></a>osSlabBlockHeadFill</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabBlockHeadFill))
-<BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
-</UL>
-
-<P><STRONG><a name="[11e]"></a>osSlabCtrlHdrGet</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_memory.o(i.osSlabCtrlHdrGet))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
 </UL>
 
-<P><STRONG><a name="[d1]"></a>osSlabMemAlloc</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemAlloc))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabBlockHeadFill
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorAlloc
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+<P><STRONG><a name="[ea]"></a>osSchedule</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_hw.o(i.osSchedule))
+<BR><BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 </UL>
 
-<P><STRONG><a name="[d6]"></a>osSlabMemFree</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemFree))
-<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+<P><STRONG><a name="[c7]"></a>osSemInit</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, los_sem.o(i.osSemInit))
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[db]"></a>osSlabMemInit</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemInit))
-<BR><BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+<P><STRONG><a name="[119]"></a>osSlabAllocatorAlloc</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorAlloc))
+<BR><BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetFindClearAndSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-</UL>
-
-<P><STRONG><a name="[cb]"></a>osSwTmrInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrInit))
-<BR><BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
 </UL>
 
-<P><STRONG><a name="[124]"></a>osSwTmrStart</STRONG> (Thumb, 382 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrStart))
-<BR><BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<P><STRONG><a name="[11b]"></a>osSlabAllocatorFree</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorFree))
+<BR><BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetGetBit
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetClearBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
 </UL>
 
-<P><STRONG><a name="[5a]"></a>osSwTmrTask</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTask))
-<BR><BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickCountGet
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
+<P><STRONG><a name="[11e]"></a>osSlabAllocatorNew</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, los_slab.o(i.osSlabAllocatorNew))
+<BR><BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osAtomicBitsetInit
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHeapAlloc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
+</UL>
+
+<P><STRONG><a name="[120]"></a>osSlabBlockHeadFill</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabBlockHeadFill))
+<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+</UL>
+
+<P><STRONG><a name="[11f]"></a>osSlabCtrlHdrGet</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_memory.o(i.osSlabCtrlHdrGet))
+<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemInit
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemFree
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabMemAlloc
+</UL>
+
+<P><STRONG><a name="[d0]"></a>osSlabMemAlloc</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemAlloc))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabBlockHeadFill
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorAlloc
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+</UL>
+
+<P><STRONG><a name="[d5]"></a>osSlabMemFree</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemFree))
+<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorFree
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
+</UL>
+
+<P><STRONG><a name="[da]"></a>osSlabMemInit</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, los_slabmem.o(i.osSlabMemInit))
+<BR><BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabAllocatorNew
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSlabCtrlHdrGet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
+</UL>
+
+<P><STRONG><a name="[ca]"></a>osSwTmrInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrInit))
+<BR><BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+</UL>
+
+<P><STRONG><a name="[125]"></a>osSwTmrStart</STRONG> (Thumb, 382 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrStart))
+<BR><BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+</UL>
+
+<P><STRONG><a name="[5b]"></a>osSwTmrTask</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTask))
+<BR><BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickCountGet
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_swtmr.o(i.osSwTmrTaskCreate)
 </UL>
-<P><STRONG><a name="[120]"></a>osSwTmrTaskCreate</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTaskCreate))
-<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<P><STRONG><a name="[121]"></a>osSwTmrTaskCreate</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTaskCreate))
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-</UL>
-
-<P><STRONG><a name="[125]"></a>osSwtmrScan</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrScan))
-<BR><BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 </UL>
 
-<P><STRONG><a name="[f2]"></a>osTaskAdd2TimerList</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, los_task.o(i.osTaskAdd2TimerList))
-<BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<P><STRONG><a name="[126]"></a>osSwtmrScan</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrScan))
+<BR><BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 
-<P><STRONG><a name="[5d]"></a>osTaskEntry</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_task.o(i.osTaskEntry))
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<P><STRONG><a name="[f1]"></a>osTaskAdd2TimerList</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, los_task.o(i.osTaskAdd2TimerList))
+<BR><BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
+</UL>
+
+<P><STRONG><a name="[5e]"></a>osTaskEntry</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, los_task.o(i.osTaskEntry))
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_hw.o(i.osTskStackInit)
 </UL>
-<P><STRONG><a name="[5c]"></a>osTaskExit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_hw.o(i.osTaskExit))
+<P><STRONG><a name="[5d]"></a>osTaskExit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_hw.o(i.osTaskExit))
 <BR>[Address Reference Count : 1]<UL><LI> los_hw.o(i.osTskStackInit)
 </UL>
-<P><STRONG><a name="[c6]"></a>osTaskInit</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, los_task.o(i.osTaskInit))
-<BR><BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<P><STRONG><a name="[c5]"></a>osTaskInit</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, los_task.o(i.osTaskInit))
+<BR><BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
-</UL>
-
-<P><STRONG><a name="[c7]"></a>osTaskMonInit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_task.o(i.osTaskMonInit))
-<BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[126]"></a>osTaskScan</STRONG> (Thumb, 174 bytes, Stack size 0 bytes, los_task.o(i.osTaskScan))
-<BR><BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<P><STRONG><a name="[c6]"></a>osTaskMonInit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_task.o(i.osTaskMonInit))
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[5b]"></a>osTaskSwitchCheck</STRONG> (Thumb, 170 bytes, Stack size 0 bytes, los_task.o(i.osTaskSwitchCheck))
-<BR><BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<P><STRONG><a name="[127]"></a>osTaskScan</STRONG> (Thumb, 174 bytes, Stack size 0 bytes, los_task.o(i.osTaskScan))
+<BR><BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+</UL>
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+</UL>
+
+<P><STRONG><a name="[5c]"></a>osTaskSwitchCheck</STRONG> (Thumb, 170 bytes, Stack size 0 bytes, los_task.o(i.osTaskSwitchCheck))
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_task.o(i.osTaskMonInit)
 </UL>
-<P><STRONG><a name="[115]"></a>osTaskWait</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, los_task.o(i.osTaskWait))
-<BR><BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<P><STRONG><a name="[116]"></a>osTaskWait</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, los_task.o(i.osTaskWait))
+<BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueDequeue
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
-</UL>
-
-<P><STRONG><a name="[116]"></a>osTaskWake</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, los_task.o(i.osTaskWake))
-<BR><BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
 </UL>
 
-<P><STRONG><a name="[ff]"></a>osTickHandler</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_tick.o(i.osTickHandler))
-<BR><BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<P><STRONG><a name="[117]"></a>osTaskWake</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, los_task.o(i.osTaskWake))
+<BR><BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueEnqueue
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+</UL>
+
+<P><STRONG><a name="[101]"></a>osTickHandler</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, los_tick.o(i.osTickHandler))
+<BR><BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[e7]"></a>osTickStart</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, los_hw_tick.o(i.osTickStart))
-<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<P><STRONG><a name="[e6]"></a>osTickStart</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, los_hw_tick.o(i.osTickStart))
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
 </UL>
 
-<P><STRONG><a name="[f4]"></a>osTimerListDelete</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_task.o(i.osTimerListDelete))
-<BR><BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<P><STRONG><a name="[f3]"></a>osTimerListDelete</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_task.o(i.osTimerListDelete))
+<BR><BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
-</UL>
-
-<P><STRONG><a name="[127]"></a>osTimesliceCheck</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceCheck))
-<BR><BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
 </UL>
 
-<P><STRONG><a name="[cc]"></a>osTimesliceInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceInit))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<P><STRONG><a name="[128]"></a>osTimesliceCheck</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceCheck))
+<BR><BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+</UL>
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 
-<P><STRONG><a name="[ee]"></a>osTskStackInit</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, los_hw.o(i.osTskStackInit))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[cb]"></a>osTimesliceInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceInit))
+<BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+
+<P><STRONG><a name="[ed]"></a>osTskStackInit</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, los_hw.o(i.osTskStackInit))
+<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[8a]"></a>LL_ADC_GetOffsetChannel</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_GetOffsetChannel))
-<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<P><STRONG><a name="[8b]"></a>LL_ADC_GetOffsetChannel</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_GetOffsetChannel))
+<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[88]"></a>LL_ADC_INJ_IsConversionOngoing</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_INJ_IsConversionOngoing))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<P><STRONG><a name="[89]"></a>LL_ADC_INJ_IsConversionOngoing</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_INJ_IsConversionOngoing))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[87]"></a>LL_ADC_REG_IsConversionOngoing</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_REG_IsConversionOngoing))
-<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
+<P><STRONG><a name="[88]"></a>LL_ADC_REG_IsConversionOngoing</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_REG_IsConversionOngoing))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 </UL>
 
-<P><STRONG><a name="[7b]"></a>LL_ADC_REG_IsTriggerSourceSWStart</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_REG_IsTriggerSourceSWStart))
+<P><STRONG><a name="[7c]"></a>LL_ADC_REG_IsTriggerSourceSWStart</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_REG_IsTriggerSourceSWStart))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAConvCplt
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[89]"></a>LL_ADC_SetChannelSamplingTime</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_SetChannelSamplingTime))
-<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<P><STRONG><a name="[8a]"></a>LL_ADC_SetChannelSamplingTime</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_SetChannelSamplingTime))
+<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[8b]"></a>LL_ADC_SetOffsetState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_SetOffsetState))
-<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<P><STRONG><a name="[8c]"></a>LL_ADC_SetOffsetState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_adc.o(i.LL_ADC_SetOffsetState))
+<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 </UL>
 
 <P><STRONG><a name="[a9]"></a>RCC_SetFlashLatencyFromMSIRange</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.RCC_SetFlashLatencyFromMSIRange))
-<BR><BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_GetVoltageRange
+<BR><BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_GetVoltageRange
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 </UL>
 
 <P><STRONG><a name="[a5]"></a>RCCEx_PLLSAI1_Config</STRONG> (Thumb, 278 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc_ex.o(i.RCCEx_PLLSAI1_Config))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 </UL>
 
-<P><STRONG><a name="[9d]"></a>DMA_SetConfig</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.DMA_SetConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
+<P><STRONG><a name="[9e]"></a>DMA_SetConfig</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32l4xx_hal_dma.o(i.DMA_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
 </UL>
 
 <P><STRONG><a name="[a4]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.__NVIC_SetPriority))
 <BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 
 <P><STRONG><a name="[b1]"></a>TIM_ITRx_SetConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_ITRx_SetConfig))
@@ -1772,100 +1778,100 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
-<P><STRONG><a name="[122]"></a>osSwTmrTimeoutHandle</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTimeoutHandle))
-<BR><BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
+<P><STRONG><a name="[123]"></a>osSwTmrTimeoutHandle</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwTmrTimeoutHandle))
+<BR><BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
-</UL>
-
-<P><STRONG><a name="[123]"></a>osSwtmrDelete</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrDelete))
-<BR><BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
 </UL>
 
-<P><STRONG><a name="[cf]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<P><STRONG><a name="[124]"></a>osSwtmrDelete</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrDelete))
+<BR><BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 </UL>
 
-<P><STRONG><a name="[ed]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListDelete))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[ce]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
 
-<P><STRONG><a name="[ce]"></a>LOS_ListTailInsert</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListTailInsert))
-<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-</UL>
-
-<P><STRONG><a name="[110]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<P><STRONG><a name="[ec]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListDelete))
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWake
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[114]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<P><STRONG><a name="[cd]"></a>LOS_ListTailInsert</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListTailInsert))
+<BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskWait
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
 </UL>
 
-<P><STRONG><a name="[112]"></a>osQueueBufferOperate</STRONG> (Thumb, 168 bytes, Stack size 0 bytes, los_queue.o(i.osQueueBufferOperate))
-<BR><BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
+<P><STRONG><a name="[111]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
 </UL>
 
-<P><STRONG><a name="[df]"></a>osQueueReadParameterCheck</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_queue.o(i.osQueueReadParameterCheck))
-<BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
-</UL>
-<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
+<P><STRONG><a name="[115]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
 </UL>
 
-<P><STRONG><a name="[e2]"></a>osQueueWriteParameterCheck</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, los_queue.o(i.osQueueWriteParameterCheck))
-<BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
+<P><STRONG><a name="[113]"></a>osQueueBufferOperate</STRONG> (Thumb, 168 bytes, Stack size 0 bytes, los_queue.o(i.osQueueBufferOperate))
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
-</UL>
-
-<P><STRONG><a name="[117]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueOperate
 </UL>
 
-<P><STRONG><a name="[106]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 0 bytes, printfa.o(i._fp_digits), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<P><STRONG><a name="[de]"></a>osQueueReadParameterCheck</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_queue.o(i.osQueueReadParameterCheck))
+<BR><BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueReadCopy
 </UL>
 
-<P><STRONG><a name="[105]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 0 bytes, printfa.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[e1]"></a>osQueueWriteParameterCheck</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, los_queue.o(i.osQueueWriteParameterCheck))
+<BR><BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWriteCopy
 </UL>
 
-<P><STRONG><a name="[109]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, printfa.o(i._printf_post_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[118]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
 </UL>
 
-<P><STRONG><a name="[108]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, printfa.o(i._printf_pre_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[108]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 0 bytes, printfa.o(i._fp_digits), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+</UL>
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[107]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 0 bytes, printfa.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
+</UL>
+
+<P><STRONG><a name="[10b]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, printfa.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[10a]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, printfa.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[4f]"></a>_scanf_char_input</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, scanf_char.o(.text))

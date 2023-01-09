@@ -33,22 +33,20 @@
 #include "stdio.h"
 /* USER CODE END Includes */
 
-/* Private variables ---------------------------------------------------------*/
-
 /* USER CODE BEGIN PV */
 UINT32 Main_Task_ID;
 UINT32 On_Flashing_LED_ID;
 UINT32 On_All_LED_ID;
 UINT32 On_Get_Tempr_ID;
+UINT32 On_Tim2_Task_ID;
 
 uint16_t adcValue = 0;
 float voltage = 0;
 int isOpenTim2 = 1;
 /* USER CODE END PV */
 
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* Private user code ---------------------------------------------------------*/
+
 /* USER CODE BEGIN 0 */
 
 /*****************************************************************************
@@ -84,8 +82,6 @@ UINT32 Create_LOS_Task(void (*Task_Func)(), char *Task_Name, UINT32 *Task_ID) {
  *****************************************************************************/
 void Delete_LOS_Task(char *Task_Name, UINT32 Task_ID)
 {
-
-	// 删除指定的 LOS 任务，如果任务存在就可以删除，否则任务不存在或者其他原因导致删除失败，串口输出信息提示
 	UINT32 uwRet = LOS_TaskDelete(Task_ID);
 	if (uwRet == LOS_OK)
 	{
@@ -115,7 +111,6 @@ void On_Flashing_LED_Task()
 		count++;
 	}
 	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);
-	// 删除对应的任务
 	Delete_LOS_Task("On_Flashing_LED_Task", On_Flashing_LED_ID);
 }
 
@@ -138,7 +133,6 @@ void On_All_LED_Task()
  *****************************************************************************/
 void On_Get_Tempr_Task()
 {
-	// 蓝灯长亮
 	HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
 	while (1)
 	{
@@ -150,27 +144,30 @@ void On_Get_Tempr_Task()
 
 /*****************************************************************************
  Author : 郑人滏
+ Function : On_Tim2_Task
+ Description : 定时器开启之后，执行该任务
+ *****************************************************************************/
+void On_Tim2_Task()
+{
+	printf("[Tips: Tim2 定时器执行中，红灯闪烁...]\n");
+	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
+	LOS_TaskDelay(1000);
+	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
+	LOS_TaskDelay(1000);
+	isOpenTim2 = 0;
+}
+
+/*****************************************************************************
+ Author : 郑人滏
  Function : HAL_TIM_PeriodElapsedCallback
  Description : TIM2 中断函数
  *****************************************************************************/
-int red_led_status = 1;
-
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	// isOpenTim2 为 0，执行红色 LED 闪烁，控制权限由主任务中正确的命令决定
 	if (isOpenTim2 == 0)
 	{
-		if (red_led_status == 1)
-		{
-			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
-			red_led_status = 0;
-		}
-		else
-		{
-			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
-			red_led_status = 1;
-		}
-		printf("[Tips: 红灯闪烁中...]\n");
+		isOpenTim2 = 1;
+		Create_LOS_Task(On_Tim2_Task, "On_Tim2_Task", &On_Tim2_Task_ID);
 	}
 }
 
@@ -187,22 +184,19 @@ void Main_Task()
 	while(1)
 	{
 		printf("[Tips: 请输入控制命令：]\n");
-		// 获取串口调试助手的字符
 		scanf("%s", command);
 		printf("\n");
 
 		if (strcmp(command, "timon") == 0)
 		{
 			printf("[Summary: 开启定时器 TIM2，通过定时器实现红灯周期闪烁]\n");
-			// 开启定时器内的任务，即周期闪烁，给 isOpenTim2 标志变量 0，让 TIM2 中断函数可以执行该任务
 			isOpenTim2 = 0;
+			HAL_TIM_Base_Start_IT(&htim2);
 		}
 		else if (strcmp(command, "timoff") == 0)
 		{
 			printf("[Summary: 关闭定时器 TIM2，红灯熄灭]\n");
-			// Tim2 中断函数不执行 if 内的代码
-			isOpenTim2 = 1;
-			// 熄灭红色 LED
+			HAL_TIM_Base_Stop_IT(&htim2);
 			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
 		}
 		else if (strcmp(command, "ledflashingon") == 0)
@@ -249,12 +243,26 @@ void Main_Task()
   */
 int main(void)
 {
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
   /* Configure the system clock */
   SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
@@ -268,12 +276,10 @@ int main(void)
 	HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
 	
-	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) &adcValue, 1);
 	
 	// Lite OS 内核初始化
 	UINT32 uwRet = LOS_KernelInit();
-	// 判断 Lite OS 内核是否初始化成功
 	if (uwRet != LOS_OK)
 	  return LOS_NOK;
 
@@ -284,10 +290,15 @@ int main(void)
 	LOS_Start();
   /* USER CODE END 2 */
 
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
-		HAL_Delay(1000);
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
   }
+  /* USER CODE END 3 */
 }
 
 /**
